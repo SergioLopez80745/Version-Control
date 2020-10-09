@@ -1,0 +1,10 @@
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.exe.config
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.exe
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.pdb
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csprojAssemblyReference.cache
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.frmMain.resources
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.Properties.Resources.resources
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csproj.GenerateResource.cache
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csproj.CoreCompileInputs.cache
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.exe
+C:\Users\mickl\Desktop\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.pdb
