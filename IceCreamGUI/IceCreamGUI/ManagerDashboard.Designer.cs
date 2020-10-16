@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDay = new System.Windows.Forms.TextBox();
             this.txtTime = new System.Windows.Forms.TextBox();
+            this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +119,7 @@
             // 
             // btnPrintReport
             // 
-            this.btnPrintReport.Location = new System.Drawing.Point(781, 524);
+            this.btnPrintReport.Location = new System.Drawing.Point(183, 524);
             this.btnPrintReport.Name = "btnPrintReport";
             this.btnPrintReport.Size = new System.Drawing.Size(165, 50);
             this.btnPrintReport.TabIndex = 8;
@@ -127,7 +128,7 @@
             // 
             // btnPrintSchedule
             // 
-            this.btnPrintSchedule.Location = new System.Drawing.Point(610, 524);
+            this.btnPrintSchedule.Location = new System.Drawing.Point(12, 524);
             this.btnPrintSchedule.Name = "btnPrintSchedule";
             this.btnPrintSchedule.Size = new System.Drawing.Size(165, 50);
             this.btnPrintSchedule.TabIndex = 9;
@@ -166,12 +167,23 @@
             this.txtTime.Size = new System.Drawing.Size(219, 20);
             this.txtTime.TabIndex = 13;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(781, 524);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(165, 50);
+            this.btnLogOut.TabIndex = 14;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(958, 586);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.txtDay);
             this.Controls.Add(this.label2);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDay;
         private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

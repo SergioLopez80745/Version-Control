@@ -16,5 +16,11 @@ namespace IceCreamGUI
         {
             InitializeComponent();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            new frmMain().Show();
+            this.Hide();
+        }
     }
 }

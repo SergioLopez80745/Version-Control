@@ -1,6 +1,6 @@
 ﻿namespace IceCreamGUI
 {
-    partial class CheakOut
+    partial class CheckOut
     {
         /// <summary>
         /// Required designer variable.
@@ -503,7 +503,7 @@
             this.lblChange.Size = new System.Drawing.Size(117, 37);
             this.lblChange.TabIndex = 36;
             // 
-            // CheakOut
+            // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -542,7 +542,7 @@
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.grpOrder);
-            this.Name = "CheakOut";
+            this.Name = "CheckOut";
             this.Text = "CheakOut";
             this.grpOrder.ResumeLayout(false);
             this.grpOrder.PerformLayout();

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheakOut.cs">
+    <Compile Include="CheckOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CheakOut.Designer.cs">
-      <DependentUpon>CheakOut.cs</DependentUpon>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeeOptionTab.cs">
       <SubType>Form</SubType>
@@ -78,8 +78,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CheakOut.resx">
-      <DependentUpon>CheakOut.cs</DependentUpon>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeOptionTab.resx">
       <DependentUpon>EmployeeOptionTab.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IceCreamGUI
 {
-    public partial class CheakOut : Form
+    public partial class CheckOut : Form
     {
-        public CheakOut()
+        public CheckOut()
         {
             InitializeComponent();
         }

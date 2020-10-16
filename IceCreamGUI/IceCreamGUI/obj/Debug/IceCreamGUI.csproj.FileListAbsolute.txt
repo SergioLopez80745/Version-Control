@@ -12,7 +12,6 @@ C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\bin\Debug\
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.exe
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.pdb
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csprojAssemblyReference.cache
-C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.CheakOut.resources
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.EmployeeOptionTab.resources
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.frmMain.resources
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.EmpDashboard.resources
@@ -22,3 +21,4 @@ C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csproj.CoreCompileInputs.cache
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.exe
 C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.pdb
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.CheckOut.resources
