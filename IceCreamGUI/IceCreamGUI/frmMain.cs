@@ -16,5 +16,27 @@ namespace IceCreamGUI
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUserId.Text == "Employee" && txtPassword.Text == "Password")
+            {
+                new EmployeeOptionTab().Show();
+                this.Hide();
+            }
+            
+            else if (txtUserId.Text == "Manager" && txtPassword.Text == "Password")
+            {
+                new ManagerDashboard().Show();
+                this.Hide();
+            }
+
+            else
+            {
+                MessageBox.Show("The UserId or Password you entered is incorrect.");
+            }
+
+
+        }
     }
 }
