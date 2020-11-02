@@ -74,7 +74,9 @@
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblGiven = new System.Windows.Forms.Label();
             this.lblChange = new System.Windows.Forms.Label();
+            this.gupCalc = new System.Windows.Forms.GroupBox();
             this.grpOrder.SuspendLayout();
+            this.gupCalc.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpOrder
@@ -94,7 +96,7 @@
             this.grpOrder.Controls.Add(this.btnPay);
             this.grpOrder.Location = new System.Drawing.Point(12, 12);
             this.grpOrder.Name = "grpOrder";
-            this.grpOrder.Size = new System.Drawing.Size(515, 662);
+            this.grpOrder.Size = new System.Drawing.Size(515, 660);
             this.grpOrder.TabIndex = 4;
             this.grpOrder.TabStop = false;
             this.grpOrder.Text = "Order";
@@ -217,7 +219,7 @@
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(570, 188);
+            this.btn7.Location = new System.Drawing.Point(13, 27);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(77, 67);
             this.btn7.TabIndex = 5;
@@ -226,7 +228,7 @@
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(570, 334);
+            this.btn1.Location = new System.Drawing.Point(13, 173);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(77, 67);
             this.btn1.TabIndex = 6;
@@ -235,7 +237,7 @@
             // 
             // btn20
             // 
-            this.btn20.Location = new System.Drawing.Point(819, 261);
+            this.btn20.Location = new System.Drawing.Point(262, 100);
             this.btn20.Name = "btn20";
             this.btn20.Size = new System.Drawing.Size(77, 67);
             this.btn20.TabIndex = 7;
@@ -244,7 +246,7 @@
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(736, 261);
+            this.btn6.Location = new System.Drawing.Point(179, 100);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(77, 67);
             this.btn6.TabIndex = 8;
@@ -253,7 +255,7 @@
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(653, 261);
+            this.btn5.Location = new System.Drawing.Point(96, 100);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(77, 67);
             this.btn5.TabIndex = 9;
@@ -262,7 +264,7 @@
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(570, 261);
+            this.btn4.Location = new System.Drawing.Point(13, 100);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(77, 67);
             this.btn4.TabIndex = 10;
@@ -271,7 +273,7 @@
             // 
             // btn10
             // 
-            this.btn10.Location = new System.Drawing.Point(819, 188);
+            this.btn10.Location = new System.Drawing.Point(262, 27);
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(77, 67);
             this.btn10.TabIndex = 11;
@@ -280,7 +282,7 @@
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(653, 188);
+            this.btn8.Location = new System.Drawing.Point(96, 27);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(77, 67);
             this.btn8.TabIndex = 12;
@@ -289,7 +291,7 @@
             // 
             // btn9
             // 
-            this.btn9.Location = new System.Drawing.Point(736, 188);
+            this.btn9.Location = new System.Drawing.Point(179, 27);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(77, 67);
             this.btn9.TabIndex = 13;
@@ -298,7 +300,7 @@
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(653, 334);
+            this.btn2.Location = new System.Drawing.Point(96, 173);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(77, 67);
             this.btn2.TabIndex = 14;
@@ -307,7 +309,7 @@
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(736, 334);
+            this.btn3.Location = new System.Drawing.Point(179, 173);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(77, 67);
             this.btn3.TabIndex = 15;
@@ -316,7 +318,7 @@
             // 
             // btn50
             // 
-            this.btn50.Location = new System.Drawing.Point(819, 334);
+            this.btn50.Location = new System.Drawing.Point(262, 173);
             this.btn50.Name = "btn50";
             this.btn50.Size = new System.Drawing.Size(77, 67);
             this.btn50.TabIndex = 16;
@@ -325,7 +327,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(570, 407);
+            this.btnClear.Location = new System.Drawing.Point(13, 246);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(77, 67);
             this.btnClear.TabIndex = 17;
@@ -334,7 +336,7 @@
             // 
             // btn0
             // 
-            this.btn0.Location = new System.Drawing.Point(653, 407);
+            this.btn0.Location = new System.Drawing.Point(96, 246);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(77, 67);
             this.btn0.TabIndex = 18;
@@ -343,7 +345,7 @@
             // 
             // btnDot
             // 
-            this.btnDot.Location = new System.Drawing.Point(736, 407);
+            this.btnDot.Location = new System.Drawing.Point(179, 246);
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(77, 67);
             this.btnDot.TabIndex = 19;
@@ -352,7 +354,7 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(819, 409);
+            this.btnEnter.Location = new System.Drawing.Point(262, 248);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(77, 67);
             this.btnEnter.TabIndex = 20;
@@ -388,7 +390,7 @@
             // 
             // btnTip
             // 
-            this.btnTip.Location = new System.Drawing.Point(909, 173);
+            this.btnTip.Location = new System.Drawing.Point(915, 188);
             this.btnTip.Name = "btnTip";
             this.btnTip.Size = new System.Drawing.Size(96, 36);
             this.btnTip.TabIndex = 24;
@@ -397,7 +399,7 @@
             // 
             // btnEmail
             // 
-            this.btnEmail.Location = new System.Drawing.Point(909, 219);
+            this.btnEmail.Location = new System.Drawing.Point(915, 230);
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.Size = new System.Drawing.Size(96, 36);
             this.btnEmail.TabIndex = 25;
@@ -406,7 +408,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(909, 265);
+            this.btnPrint.Location = new System.Drawing.Point(915, 272);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(96, 36);
             this.btnPrint.TabIndex = 26;
@@ -503,12 +505,38 @@
             this.lblChange.Size = new System.Drawing.Size(117, 37);
             this.lblChange.TabIndex = 36;
             // 
+            // gupCalc
+            // 
+            this.gupCalc.Controls.Add(this.btnEnter);
+            this.gupCalc.Controls.Add(this.btnDot);
+            this.gupCalc.Controls.Add(this.btn0);
+            this.gupCalc.Controls.Add(this.btnClear);
+            this.gupCalc.Controls.Add(this.btn50);
+            this.gupCalc.Controls.Add(this.btn3);
+            this.gupCalc.Controls.Add(this.btn2);
+            this.gupCalc.Controls.Add(this.btn9);
+            this.gupCalc.Controls.Add(this.btn8);
+            this.gupCalc.Controls.Add(this.btn10);
+            this.gupCalc.Controls.Add(this.btn4);
+            this.gupCalc.Controls.Add(this.btn5);
+            this.gupCalc.Controls.Add(this.btn6);
+            this.gupCalc.Controls.Add(this.btn20);
+            this.gupCalc.Controls.Add(this.btn1);
+            this.gupCalc.Controls.Add(this.btn7);
+            this.gupCalc.Location = new System.Drawing.Point(557, 161);
+            this.gupCalc.Name = "gupCalc";
+            this.gupCalc.Size = new System.Drawing.Size(352, 325);
+            this.gupCalc.TabIndex = 37;
+            this.gupCalc.TabStop = false;
+            this.gupCalc.Text = "Calculate";
+            // 
             // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1017, 684);
+            this.Controls.Add(this.gupCalc);
             this.Controls.Add(this.lblChange);
             this.Controls.Add(this.lblGiven);
             this.Controls.Add(this.lblBalance);
@@ -525,27 +553,12 @@
             this.Controls.Add(this.btnDebit);
             this.Controls.Add(this.btnCredit);
             this.Controls.Add(this.btnCash);
-            this.Controls.Add(this.btnEnter);
-            this.Controls.Add(this.btnDot);
-            this.Controls.Add(this.btn0);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btn50);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn9);
-            this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn10);
-            this.Controls.Add(this.btn4);
-            this.Controls.Add(this.btn5);
-            this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn20);
-            this.Controls.Add(this.btn1);
-            this.Controls.Add(this.btn7);
             this.Controls.Add(this.grpOrder);
             this.Name = "CheckOut";
             this.Text = "CheakOut";
             this.grpOrder.ResumeLayout(false);
             this.grpOrder.PerformLayout();
+            this.gupCalc.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,5 +612,6 @@
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblGiven;
         private System.Windows.Forms.Label lblChange;
+        private System.Windows.Forms.GroupBox gupCalc;
     }
 }
