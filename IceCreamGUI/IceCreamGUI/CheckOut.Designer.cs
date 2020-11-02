@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.grpOrder = new System.Windows.Forms.GroupBox();
-            this.btnAddDiscount = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -81,7 +80,6 @@
             // 
             // grpOrder
             // 
-            this.grpOrder.Controls.Add(this.btnAddDiscount);
             this.grpOrder.Controls.Add(this.listBox1);
             this.grpOrder.Controls.Add(this.label11);
             this.grpOrder.Controls.Add(this.label10);
@@ -100,15 +98,6 @@
             this.grpOrder.TabIndex = 4;
             this.grpOrder.TabStop = false;
             this.grpOrder.Text = "Order";
-            // 
-            // btnAddDiscount
-            // 
-            this.btnAddDiscount.Location = new System.Drawing.Point(6, 615);
-            this.btnAddDiscount.Name = "btnAddDiscount";
-            this.btnAddDiscount.Size = new System.Drawing.Size(133, 41);
-            this.btnAddDiscount.TabIndex = 18;
-            this.btnAddDiscount.Text = "Add Discount";
-            this.btnAddDiscount.UseVisualStyleBackColor = true;
             // 
             // listBox1
             // 
@@ -225,6 +214,7 @@
             this.btn7.TabIndex = 5;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn1
             // 
@@ -234,6 +224,7 @@
             this.btn1.TabIndex = 6;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn20
             // 
@@ -243,6 +234,7 @@
             this.btn20.TabIndex = 7;
             this.btn20.Text = "$20";
             this.btn20.UseVisualStyleBackColor = true;
+            this.btn20.Click += new System.EventHandler(this.btn20_Click);
             // 
             // btn6
             // 
@@ -252,6 +244,7 @@
             this.btn6.TabIndex = 8;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
@@ -261,6 +254,7 @@
             this.btn5.TabIndex = 9;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
@@ -270,6 +264,7 @@
             this.btn4.TabIndex = 10;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn10
             // 
@@ -279,6 +274,7 @@
             this.btn10.TabIndex = 11;
             this.btn10.Text = "$10";
             this.btn10.UseVisualStyleBackColor = true;
+            this.btn10.Click += new System.EventHandler(this.btn10_Click);
             // 
             // btn8
             // 
@@ -288,6 +284,7 @@
             this.btn8.TabIndex = 12;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn9
             // 
@@ -297,6 +294,7 @@
             this.btn9.TabIndex = 13;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn2
             // 
@@ -306,6 +304,7 @@
             this.btn2.TabIndex = 14;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn3
             // 
@@ -315,6 +314,7 @@
             this.btn3.TabIndex = 15;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn50
             // 
@@ -324,6 +324,7 @@
             this.btn50.TabIndex = 16;
             this.btn50.Text = "$50";
             this.btn50.UseVisualStyleBackColor = true;
+            this.btn50.Click += new System.EventHandler(this.btn50_Click);
             // 
             // btnClear
             // 
@@ -333,6 +334,7 @@
             this.btnClear.TabIndex = 17;
             this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btn0
             // 
@@ -342,6 +344,7 @@
             this.btn0.TabIndex = 18;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btnDot
             // 
@@ -351,6 +354,7 @@
             this.btnDot.TabIndex = 19;
             this.btnDot.Text = ".";
             this.btnDot.UseVisualStyleBackColor = true;
+            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
             // 
             // btnEnter
             // 
@@ -358,8 +362,9 @@
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(77, 67);
             this.btnEnter.TabIndex = 20;
-            this.btnEnter.Text = "<";
+            this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnCash
             // 
@@ -432,6 +437,7 @@
             this.btnAddItems.TabIndex = 28;
             this.btnAddItems.Text = "Add Items";
             this.btnAddItems.UseVisualStyleBackColor = true;
+            this.btnAddItems.Click += new System.EventHandler(this.btnAddItems_Click);
             // 
             // label3
             // 
@@ -567,7 +573,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpOrder;
-        private System.Windows.Forms.Button btnAddDiscount;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
