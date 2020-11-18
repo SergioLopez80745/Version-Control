@@ -1,27 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace IceCreamGUI
 {
     public partial class frmMain : Form
     {
+        public static List<IceCream> cart = new List<IceCream>();
+
         public frmMain()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
         }
 
         public class IceCream
         {
-            public enum flavorType { CHOCOLATE, VANILLA, STRAWBERRY, BANANA, COFFEE }
+            public enum flavorType { CHOCOLATE, VANILLA, STRAWBERRY, BANANA, COFFEE, SHERBERT }
             public enum sizeType { SMALL, MEDIUM, LARGE }
-            public enum toppingType { SPRINKLES, COOKIE, CHOCOLATECHIP, OREOS, CEREAL }
+            public enum toppingType { SPRINKLES, COOKIE, CHOCOLATECHIP, OREOS, CEREAL, NUTS }
 
             public flavorType Flavor { get; set; }
             public sizeType Size { get; set; }
@@ -32,6 +31,13 @@ namespace IceCreamGUI
             public IceCream()
             {
                 Toppings = new List<toppingType>();
+            }
+
+            public override string ToString()
+            {
+                string newToppings = string.Join(", ", Toppings);
+
+                return Size + " / " + Flavor + " / " + newToppings;
             }
 
             public void Calculate()
@@ -57,12 +63,14 @@ namespace IceCreamGUI
             if (txtUserId.Text == "Employee" && txtPassword.Text == "Password")
             {
                 new EmployeeOptionTab().Show();
+               txtPassword.UseSystemPasswordChar = true;
                 this.Hide();
             }
             
             else if (txtUserId.Text == "Manager" && txtPassword.Text == "Password")
             {
                 new ManagerDashboard().Show();
+                txtPassword.UseSystemPasswordChar = true;
                 this.Hide();
             }
 

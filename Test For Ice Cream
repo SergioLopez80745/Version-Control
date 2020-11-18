@@ -1,0 +1,8 @@
+Ice Cream Shop Program
+
+Store {Address, StoreId}
+Manager{Address,ManagerId}
+Employee{Adress,EmployeeId}
+
+Testing something blah blah (Sergio)
+********************Only a Test***********************

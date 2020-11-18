@@ -30,7 +30,7 @@
         {
             this.btnPay = new System.Windows.Forms.Button();
             this.grpOrder = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstCart = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,23 +42,25 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.grpMenuFlavors = new System.Windows.Forms.GroupBox();
+            this.chkSherbert = new System.Windows.Forms.CheckBox();
+            this.chkCoffee = new System.Windows.Forms.CheckBox();
+            this.chkBanana = new System.Windows.Forms.CheckBox();
+            this.chkStrawberry = new System.Windows.Forms.CheckBox();
+            this.chkVanilla = new System.Windows.Forms.CheckBox();
+            this.chkChocolate = new System.Windows.Forms.CheckBox();
             this.grpToppings = new System.Windows.Forms.GroupBox();
+            this.chkNuts = new System.Windows.Forms.CheckBox();
+            this.chkCereal = new System.Windows.Forms.CheckBox();
+            this.chkOreos = new System.Windows.Forms.CheckBox();
+            this.chkChocolateChip = new System.Windows.Forms.CheckBox();
+            this.chkCookie = new System.Windows.Forms.CheckBox();
+            this.chkSprinkles = new System.Windows.Forms.CheckBox();
             this.grpSize = new System.Windows.Forms.GroupBox();
-            this.radSmall = new System.Windows.Forms.RadioButton();
+            this.radMedium = new System.Windows.Forms.RadioButton();
             this.radLarge = new System.Windows.Forms.RadioButton();
-            this.radMed = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.radSmall = new System.Windows.Forms.RadioButton();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.grpOrder.SuspendLayout();
             this.grpMenuFlavors.SuspendLayout();
             this.grpToppings.SuspendLayout();
@@ -77,7 +79,7 @@
             // 
             // grpOrder
             // 
-            this.grpOrder.Controls.Add(this.listBox1);
+            this.grpOrder.Controls.Add(this.lstCart);
             this.grpOrder.Controls.Add(this.label11);
             this.grpOrder.Controls.Add(this.label10);
             this.grpOrder.Controls.Add(this.label8);
@@ -96,13 +98,13 @@
             this.grpOrder.TabStop = false;
             this.grpOrder.Text = "Order";
             // 
-            // listBox1
+            // lstCart
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 69);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(503, 329);
-            this.listBox1.TabIndex = 17;
+            this.lstCart.FormattingEnabled = true;
+            this.lstCart.Location = new System.Drawing.Point(6, 69);
+            this.lstCart.Name = "lstCart";
+            this.lstCart.Size = new System.Drawing.Size(503, 329);
+            this.lstCart.TabIndex = 17;
             // 
             // label11
             // 
@@ -196,57 +198,189 @@
             // 
             // grpMenuFlavors
             // 
-            this.grpMenuFlavors.Controls.Add(this.checkBox7);
-            this.grpMenuFlavors.Controls.Add(this.checkBox8);
-            this.grpMenuFlavors.Controls.Add(this.checkBox9);
-            this.grpMenuFlavors.Controls.Add(this.checkBox10);
-            this.grpMenuFlavors.Controls.Add(this.checkBox11);
-            this.grpMenuFlavors.Controls.Add(this.checkBox12);
-            this.grpMenuFlavors.Location = new System.Drawing.Point(533, 235);
+            this.grpMenuFlavors.Controls.Add(this.chkSherbert);
+            this.grpMenuFlavors.Controls.Add(this.chkCoffee);
+            this.grpMenuFlavors.Controls.Add(this.chkBanana);
+            this.grpMenuFlavors.Controls.Add(this.chkStrawberry);
+            this.grpMenuFlavors.Controls.Add(this.chkVanilla);
+            this.grpMenuFlavors.Controls.Add(this.chkChocolate);
+            this.grpMenuFlavors.Location = new System.Drawing.Point(533, 209);
             this.grpMenuFlavors.Name = "grpMenuFlavors";
-            this.grpMenuFlavors.Size = new System.Drawing.Size(442, 245);
+            this.grpMenuFlavors.Size = new System.Drawing.Size(442, 232);
             this.grpMenuFlavors.TabIndex = 4;
             this.grpMenuFlavors.TabStop = false;
             this.grpMenuFlavors.Text = "Menu Flavors";
             // 
+            // chkSherbert
+            // 
+            this.chkSherbert.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkSherbert.Location = new System.Drawing.Point(300, 97);
+            this.chkSherbert.Name = "chkSherbert";
+            this.chkSherbert.Size = new System.Drawing.Size(131, 64);
+            this.chkSherbert.TabIndex = 25;
+            this.chkSherbert.Text = "Sherbert";
+            this.chkSherbert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkSherbert.UseVisualStyleBackColor = true;
+            // 
+            // chkCoffee
+            // 
+            this.chkCoffee.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkCoffee.Location = new System.Drawing.Point(153, 97);
+            this.chkCoffee.Name = "chkCoffee";
+            this.chkCoffee.Size = new System.Drawing.Size(131, 64);
+            this.chkCoffee.TabIndex = 24;
+            this.chkCoffee.Text = "Coffee";
+            this.chkCoffee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkCoffee.UseVisualStyleBackColor = true;
+            // 
+            // chkBanana
+            // 
+            this.chkBanana.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkBanana.Location = new System.Drawing.Point(6, 97);
+            this.chkBanana.Name = "chkBanana";
+            this.chkBanana.Size = new System.Drawing.Size(131, 64);
+            this.chkBanana.TabIndex = 23;
+            this.chkBanana.Text = "Banana";
+            this.chkBanana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkBanana.UseVisualStyleBackColor = true;
+            // 
+            // chkStrawberry
+            // 
+            this.chkStrawberry.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkStrawberry.Location = new System.Drawing.Point(300, 27);
+            this.chkStrawberry.Name = "chkStrawberry";
+            this.chkStrawberry.Size = new System.Drawing.Size(131, 64);
+            this.chkStrawberry.TabIndex = 22;
+            this.chkStrawberry.Text = "Strawberry";
+            this.chkStrawberry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkStrawberry.UseVisualStyleBackColor = true;
+            // 
+            // chkVanilla
+            // 
+            this.chkVanilla.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkVanilla.Location = new System.Drawing.Point(153, 27);
+            this.chkVanilla.Name = "chkVanilla";
+            this.chkVanilla.Size = new System.Drawing.Size(131, 64);
+            this.chkVanilla.TabIndex = 21;
+            this.chkVanilla.Text = "Vanilla";
+            this.chkVanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkVanilla.UseVisualStyleBackColor = true;
+            // 
+            // chkChocolate
+            // 
+            this.chkChocolate.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkChocolate.Location = new System.Drawing.Point(6, 27);
+            this.chkChocolate.Name = "chkChocolate";
+            this.chkChocolate.Size = new System.Drawing.Size(131, 64);
+            this.chkChocolate.TabIndex = 20;
+            this.chkChocolate.Text = "Chocolate";
+            this.chkChocolate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkChocolate.UseVisualStyleBackColor = true;
+            // 
             // grpToppings
             // 
-            this.grpToppings.Controls.Add(this.checkBox6);
-            this.grpToppings.Controls.Add(this.checkBox5);
-            this.grpToppings.Controls.Add(this.checkBox4);
-            this.grpToppings.Controls.Add(this.checkBox3);
-            this.grpToppings.Controls.Add(this.checkBox2);
-            this.grpToppings.Controls.Add(this.checkBox1);
-            this.grpToppings.Location = new System.Drawing.Point(533, 486);
+            this.grpToppings.Controls.Add(this.chkNuts);
+            this.grpToppings.Controls.Add(this.chkCereal);
+            this.grpToppings.Controls.Add(this.chkOreos);
+            this.grpToppings.Controls.Add(this.chkChocolateChip);
+            this.grpToppings.Controls.Add(this.chkCookie);
+            this.grpToppings.Controls.Add(this.chkSprinkles);
+            this.grpToppings.Location = new System.Drawing.Point(539, 447);
             this.grpToppings.Name = "grpToppings";
-            this.grpToppings.Size = new System.Drawing.Size(442, 258);
+            this.grpToppings.Size = new System.Drawing.Size(442, 232);
             this.grpToppings.TabIndex = 5;
             this.grpToppings.TabStop = false;
             this.grpToppings.Text = "Toppings";
             // 
+            // chkNuts
+            // 
+            this.chkNuts.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkNuts.Location = new System.Drawing.Point(300, 96);
+            this.chkNuts.Name = "chkNuts";
+            this.chkNuts.Size = new System.Drawing.Size(131, 64);
+            this.chkNuts.TabIndex = 19;
+            this.chkNuts.Text = "Nuts";
+            this.chkNuts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkNuts.UseVisualStyleBackColor = true;
+            // 
+            // chkCereal
+            // 
+            this.chkCereal.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkCereal.Location = new System.Drawing.Point(153, 96);
+            this.chkCereal.Name = "chkCereal";
+            this.chkCereal.Size = new System.Drawing.Size(131, 64);
+            this.chkCereal.TabIndex = 18;
+            this.chkCereal.Text = "Cereal";
+            this.chkCereal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkCereal.UseVisualStyleBackColor = true;
+            // 
+            // chkOreos
+            // 
+            this.chkOreos.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkOreos.Location = new System.Drawing.Point(6, 96);
+            this.chkOreos.Name = "chkOreos";
+            this.chkOreos.Size = new System.Drawing.Size(131, 64);
+            this.chkOreos.TabIndex = 17;
+            this.chkOreos.Text = "Oreos";
+            this.chkOreos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkOreos.UseVisualStyleBackColor = true;
+            // 
+            // chkChocolateChip
+            // 
+            this.chkChocolateChip.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkChocolateChip.Location = new System.Drawing.Point(300, 26);
+            this.chkChocolateChip.Name = "chkChocolateChip";
+            this.chkChocolateChip.Size = new System.Drawing.Size(131, 64);
+            this.chkChocolateChip.TabIndex = 16;
+            this.chkChocolateChip.Text = "Chocolate Chip";
+            this.chkChocolateChip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkChocolateChip.UseVisualStyleBackColor = true;
+            // 
+            // chkCookie
+            // 
+            this.chkCookie.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkCookie.Location = new System.Drawing.Point(153, 26);
+            this.chkCookie.Name = "chkCookie";
+            this.chkCookie.Size = new System.Drawing.Size(131, 64);
+            this.chkCookie.TabIndex = 15;
+            this.chkCookie.Text = "Cookie";
+            this.chkCookie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkCookie.UseVisualStyleBackColor = true;
+            // 
+            // chkSprinkles
+            // 
+            this.chkSprinkles.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkSprinkles.Location = new System.Drawing.Point(6, 26);
+            this.chkSprinkles.Name = "chkSprinkles";
+            this.chkSprinkles.Size = new System.Drawing.Size(131, 64);
+            this.chkSprinkles.TabIndex = 14;
+            this.chkSprinkles.Text = "Sprinkles";
+            this.chkSprinkles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkSprinkles.UseVisualStyleBackColor = true;
+            // 
             // grpSize
             // 
-            this.grpSize.Controls.Add(this.radMed);
+            this.grpSize.Controls.Add(this.radMedium);
             this.grpSize.Controls.Add(this.radLarge);
             this.grpSize.Controls.Add(this.radSmall);
             this.grpSize.Location = new System.Drawing.Point(533, 82);
             this.grpSize.Name = "grpSize";
-            this.grpSize.Size = new System.Drawing.Size(442, 147);
+            this.grpSize.Size = new System.Drawing.Size(442, 121);
             this.grpSize.TabIndex = 6;
             this.grpSize.TabStop = false;
             this.grpSize.Text = "Size";
             // 
-            // radSmall
+            // radMedium
             // 
-            this.radSmall.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSmall.Location = new System.Drawing.Point(6, 35);
-            this.radSmall.Name = "radSmall";
-            this.radSmall.Size = new System.Drawing.Size(131, 64);
-            this.radSmall.TabIndex = 9;
-            this.radSmall.TabStop = true;
-            this.radSmall.Text = "Small";
-            this.radSmall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radSmall.UseVisualStyleBackColor = true;
+            this.radMedium.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radMedium.Location = new System.Drawing.Point(153, 35);
+            this.radMedium.Name = "radMedium";
+            this.radMedium.Size = new System.Drawing.Size(131, 64);
+            this.radMedium.TabIndex = 12;
+            this.radMedium.TabStop = true;
+            this.radMedium.Text = "Medium";
+            this.radMedium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radMedium.UseVisualStyleBackColor = true;
             // 
             // radLarge
             // 
@@ -260,137 +394,36 @@
             this.radLarge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radLarge.UseVisualStyleBackColor = true;
             // 
-            // radMed
+            // radSmall
             // 
-            this.radMed.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radMed.Location = new System.Drawing.Point(153, 35);
-            this.radMed.Name = "radMed";
-            this.radMed.Size = new System.Drawing.Size(131, 64);
-            this.radMed.TabIndex = 12;
-            this.radMed.TabStop = true;
-            this.radMed.Text = "Medium";
-            this.radMed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radMed.UseVisualStyleBackColor = true;
+            this.radSmall.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radSmall.Location = new System.Drawing.Point(6, 35);
+            this.radSmall.Name = "radSmall";
+            this.radSmall.Size = new System.Drawing.Size(131, 64);
+            this.radSmall.TabIndex = 9;
+            this.radSmall.TabStop = true;
+            this.radSmall.Text = "Small";
+            this.radSmall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radSmall.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // btnAdd
             // 
-            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox1.Location = new System.Drawing.Point(6, 26);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(131, 64);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(834, 685);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(141, 59);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "Add Ice Cream";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // checkBox2
+            // btnRemove
             // 
-            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.Location = new System.Drawing.Point(153, 26);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(131, 64);
-            this.checkBox2.TabIndex = 15;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox3.Location = new System.Drawing.Point(300, 26);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(131, 64);
-            this.checkBox3.TabIndex = 16;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox4.Location = new System.Drawing.Point(6, 96);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(131, 64);
-            this.checkBox4.TabIndex = 17;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox5.Location = new System.Drawing.Point(153, 96);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(131, 64);
-            this.checkBox5.TabIndex = 18;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox6.Location = new System.Drawing.Point(300, 96);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(131, 64);
-            this.checkBox6.TabIndex = 19;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox7.Location = new System.Drawing.Point(300, 97);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(131, 64);
-            this.checkBox7.TabIndex = 25;
-            this.checkBox7.Text = "checkBox7";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox8.Location = new System.Drawing.Point(153, 97);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(131, 64);
-            this.checkBox8.TabIndex = 24;
-            this.checkBox8.Text = "checkBox8";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox9.Location = new System.Drawing.Point(6, 97);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(131, 64);
-            this.checkBox9.TabIndex = 23;
-            this.checkBox9.Text = "checkBox9";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox10.Location = new System.Drawing.Point(300, 27);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(131, 64);
-            this.checkBox10.TabIndex = 22;
-            this.checkBox10.Text = "checkBox10";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox11.Location = new System.Drawing.Point(153, 27);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(131, 64);
-            this.checkBox11.TabIndex = 21;
-            this.checkBox11.Text = "checkBox11";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox12.Location = new System.Drawing.Point(6, 27);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(131, 64);
-            this.checkBox12.TabIndex = 20;
-            this.checkBox12.Text = "checkBox12";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.btnRemove.Location = new System.Drawing.Point(687, 685);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(141, 59);
+            this.btnRemove.TabIndex = 8;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
             // 
             // EmpDashboard
             // 
@@ -398,6 +431,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(987, 756);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grpSize);
             this.Controls.Add(this.grpToppings);
             this.Controls.Add(this.grpMenuFlavors);
@@ -416,7 +451,7 @@
         #endregion
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.GroupBox grpOrder;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstCart;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
@@ -429,21 +464,23 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.GroupBox grpMenuFlavors;
         private System.Windows.Forms.GroupBox grpToppings;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkNuts;
+        private System.Windows.Forms.CheckBox chkCereal;
+        private System.Windows.Forms.CheckBox chkOreos;
+        private System.Windows.Forms.CheckBox chkChocolateChip;
+        private System.Windows.Forms.CheckBox chkCookie;
+        private System.Windows.Forms.CheckBox chkSprinkles;
         private System.Windows.Forms.GroupBox grpSize;
-        private System.Windows.Forms.RadioButton radMed;
+        private System.Windows.Forms.RadioButton radMedium;
         private System.Windows.Forms.RadioButton radLarge;
         private System.Windows.Forms.RadioButton radSmall;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox chkSherbert;
+        private System.Windows.Forms.CheckBox chkCoffee;
+        private System.Windows.Forms.CheckBox chkBanana;
+        private System.Windows.Forms.CheckBox chkStrawberry;
+        private System.Windows.Forms.CheckBox chkVanilla;
+        private System.Windows.Forms.CheckBox chkChocolate;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemove;
     }
 }
