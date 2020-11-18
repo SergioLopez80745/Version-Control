@@ -33,10 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUserId = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnClockIn = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnClockOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,16 +79,6 @@
             this.txtPassword.Size = new System.Drawing.Size(268, 20);
             this.txtPassword.TabIndex = 4;
             // 
-            // btnClockIn
-            // 
-            this.btnClockIn.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClockIn.Location = new System.Drawing.Point(101, 268);
-            this.btnClockIn.Name = "btnClockIn";
-            this.btnClockIn.Size = new System.Drawing.Size(123, 45);
-            this.btnClockIn.TabIndex = 5;
-            this.btnClockIn.Text = "Clock In";
-            this.btnClockIn.UseVisualStyleBackColor = false;
-            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -113,26 +101,14 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // btnClockOut
-            // 
-            this.btnClockOut.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClockOut.Location = new System.Drawing.Point(230, 268);
-            this.btnClockOut.Name = "btnClockOut";
-            this.btnClockOut.Size = new System.Drawing.Size(123, 45);
-            this.btnClockOut.TabIndex = 8;
-            this.btnClockOut.Text = "Clock Out";
-            this.btnClockOut.UseVisualStyleBackColor = false;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(623, 325);
-            this.Controls.Add(this.btnClockOut);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnClockIn);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserId);
             this.Controls.Add(this.label3);
@@ -152,10 +128,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUserId;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnClockIn;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnClockOut;
     }
 }
 
