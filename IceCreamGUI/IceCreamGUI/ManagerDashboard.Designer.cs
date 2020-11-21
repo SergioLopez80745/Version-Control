@@ -31,18 +31,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnViewEmp = new System.Windows.Forms.Button();
             this.btnViewItem = new System.Windows.Forms.Button();
-            this.btnViewReports = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
-            this.btnPrintReport = new System.Windows.Forms.Button();
             this.btnPrintSchedule = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDay = new System.Windows.Forms.TextBox();
             this.txtTime = new System.Windows.Forms.TextBox();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnPrintInventory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,15 +70,6 @@
             this.btnViewItem.TabIndex = 2;
             this.btnViewItem.Text = "View Inventory";
             this.btnViewItem.UseVisualStyleBackColor = true;
-            // 
-            // btnViewReports
-            // 
-            this.btnViewReports.Location = new System.Drawing.Point(336, 12);
-            this.btnViewReports.Name = "btnViewReports";
-            this.btnViewReports.Size = new System.Drawing.Size(156, 56);
-            this.btnViewReports.TabIndex = 3;
-            this.btnViewReports.Text = "View Reports";
-            this.btnViewReports.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -116,15 +106,6 @@
             this.btnSend.TabIndex = 7;
             this.btnSend.Text = "Send Changes";
             this.btnSend.UseVisualStyleBackColor = true;
-            // 
-            // btnPrintReport
-            // 
-            this.btnPrintReport.Location = new System.Drawing.Point(183, 524);
-            this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(165, 50);
-            this.btnPrintReport.TabIndex = 8;
-            this.btnPrintReport.Text = "Print Report";
-            this.btnPrintReport.UseVisualStyleBackColor = true;
             // 
             // btnPrintSchedule
             // 
@@ -177,6 +158,15 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // btnPrintInventory
+            // 
+            this.btnPrintInventory.Location = new System.Drawing.Point(183, 524);
+            this.btnPrintInventory.Name = "btnPrintInventory";
+            this.btnPrintInventory.Size = new System.Drawing.Size(165, 50);
+            this.btnPrintInventory.TabIndex = 8;
+            this.btnPrintInventory.Text = "Print Inventory";
+            this.btnPrintInventory.UseVisualStyleBackColor = true;
+            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,12 +179,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPrintSchedule);
-            this.Controls.Add(this.btnPrintReport);
+            this.Controls.Add(this.btnPrintInventory);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnViewReports);
             this.Controls.Add(this.btnViewItem);
             this.Controls.Add(this.btnViewEmp);
             this.Controls.Add(this.dataGridView1);
@@ -211,17 +200,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnViewEmp;
         private System.Windows.Forms.Button btnViewItem;
-        private System.Windows.Forms.Button btnViewReports;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Button btnPrintReport;
         private System.Windows.Forms.Button btnPrintSchedule;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDay;
         private System.Windows.Forms.TextBox txtTime;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnPrintInventory;
     }
 }

@@ -39,38 +39,40 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(351, 264);
+            this.btnLogOut.Location = new System.Drawing.Point(351, 171);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(146, 42);
-            this.btnLogOut.TabIndex = 11;
+            this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 44);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(484, 112);
-            this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.Size = new System.Drawing.Size(485, 112);
+            this.dataGridView1.TabIndex = 2;
             // 
             // btnSchedule
             // 
-            this.btnSchedule.Location = new System.Drawing.Point(182, 264);
+            this.btnSchedule.Location = new System.Drawing.Point(182, 171);
             this.btnSchedule.Name = "btnSchedule";
             this.btnSchedule.Size = new System.Drawing.Size(146, 42);
-            this.btnSchedule.TabIndex = 9;
+            this.btnSchedule.TabIndex = 4;
             this.btnSchedule.Text = "View Schedule";
             this.btnSchedule.UseVisualStyleBackColor = true;
             // 
             // BtnStartOrder
             // 
-            this.BtnStartOrder.Location = new System.Drawing.Point(12, 264);
+            this.BtnStartOrder.Location = new System.Drawing.Point(12, 171);
             this.BtnStartOrder.Name = "BtnStartOrder";
             this.BtnStartOrder.Size = new System.Drawing.Size(146, 42);
-            this.BtnStartOrder.TabIndex = 8;
+            this.BtnStartOrder.TabIndex = 3;
             this.BtnStartOrder.Text = "Start Order";
             this.BtnStartOrder.UseVisualStyleBackColor = true;
+            this.BtnStartOrder.Click += new System.EventHandler(this.BtnStartOrder_Click);
             // 
             // label2
             // 
@@ -78,7 +80,7 @@
             this.label2.Location = new System.Drawing.Point(81, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
             // label1
@@ -87,14 +89,14 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Empolyee #";
             // 
             // EmployeeTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 323);
+            this.ClientSize = new System.Drawing.Size(509, 225);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSchedule);

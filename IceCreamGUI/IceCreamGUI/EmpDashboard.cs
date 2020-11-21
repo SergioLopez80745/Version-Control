@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static IceCreamGUI.frmMain;
 
 namespace IceCreamGUI
 {
@@ -25,18 +20,18 @@ namespace IceCreamGUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            iceCream iceCream = new iceCream();
-            iceCream.Toppings = new List<iceCream.ToppingType>();
+            IceCream IceCream = new IceCream();
+            IceCream.Toppings = new List<IceCream.toppingType>();
 
 
 
             //will call from frmMain to calculate iceCream
-            iceCream.Calculate();
-            frmMain.cart.Add(iceCream);
+            IceCream.Calculate();
+            cart.Add(IceCream);
 
             MessageBox.Show("IceCream has been added to cart.");
 
-            //lstCart.Items.Add(pizza);
+            //lstCart.Items.Add(iceCream);
             listCart();
 
             //will call to reset form
@@ -45,12 +40,12 @@ namespace IceCreamGUI
 
         private void listCart()
         {
-            iceCream iceCream = new iceCream();
-            iceCream.Toppings = new List<iceCream.toppingType>();
+            IceCream iceCream = new IceCream();
+            iceCream.Toppings = new List<IceCream.toppingType>();
             int num = 0;
 
             lstCart.Items.Clear();
-            foreach (iceCream I in frmMain.cart)
+            foreach (IceCream I in cart)
             {
                 num++;
                 lstCart.Items.Add(I);

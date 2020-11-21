@@ -8,7 +8,7 @@ namespace IceCreamGUI
 {
     public partial class frmMain : Form
     {
-        public static List<iceCream> cart = new List<iceCream>();
+        public static List<IceCream> cart = new List<IceCream>();
 
         public frmMain()
         {
@@ -16,7 +16,7 @@ namespace IceCreamGUI
             txtPassword.PasswordChar = '*';
         }
 
-        public class iceCream
+        public class IceCream
         {
             public enum flavorType { CHOCOLATE, VANILLA, STRAWBERRY, BANANA, COFFEE, SHERBERT }
             public enum sizeType { SMALL, MEDIUM, LARGE }
@@ -28,7 +28,7 @@ namespace IceCreamGUI
             public double Cost { get; set; }
 
 
-            public iceCream()
+            public IceCream()
             {
                 Toppings = new List<toppingType>();
             }

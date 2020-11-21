@@ -16,5 +16,17 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void BtnStartOrder_Click(object sender, EventArgs e)
+        {
+            new OrderTab().Show();
+            this.Hide();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            new frmMain().Show();
+            this.Hide();
+        }
     }
 }
