@@ -80,9 +80,13 @@ namespace Test
 
             public override string ToString()
             {
-                string newToppings = string.Join(", ", Toppings);
-
-                return Size + " / " + Flavor + " / " + newToppings;
+                string iceCreamstring;
+                iceCreamstring = Size + " " + Flavor + "   ";
+                foreach (toppingType t in Toppings)
+                {
+                    iceCreamstring += t.ToString() + " ";
+                }
+                return iceCreamstring;
             }
 
             public void Calculate()

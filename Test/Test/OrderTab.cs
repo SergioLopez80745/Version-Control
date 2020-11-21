@@ -34,8 +34,8 @@ namespace Test
 
         private void listCart()
         {
-            IceCream iceCream = new IceCream();
-            iceCream.Toppings = new List<IceCream.toppingType>();
+            IceCream IceCream = new IceCream();
+            IceCream.Toppings = new List<IceCream.toppingType>();
             int num = 0;
 
             lstCart.Items.Clear();
@@ -90,6 +90,26 @@ namespace Test
         private void btnCancel_Click(object sender, EventArgs e)
         {
             lstCart.Items.Clear();
+        }
+
+        private void RefreshList()
+        {
+            double subTotal = 0;
+
+            lstCart.Items.Clear();
+
+            //using list box
+            foreach (IceCream I in frmMain.cart)
+            {
+                lstCart.Items.Add(I);
+                subTotal += I.Cost;
+            }
+            lblsubTotal.Text = subTotal.ToString("C2");
+
+            lblSize.Text = "Size ";
+            lblFlavor.Text = "Flavor ";
+            lblToppings.Text = "Toppings ";
+            lblTotal.Text = "Cost ";
         }
     }
 }
