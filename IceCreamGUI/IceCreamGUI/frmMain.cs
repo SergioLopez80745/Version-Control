@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace IceCreamGUI
 {
     public partial class frmMain : Form
     {
-        public static List<IceCream> cart = new List<IceCream>();
+        public static List<iceCream> cart = new List<iceCream>();
 
         public frmMain()
         {
@@ -16,7 +16,7 @@ namespace IceCreamGUI
             txtPassword.PasswordChar = '*';
         }
 
-        public class IceCream
+        public class iceCream
         {
             public enum flavorType { CHOCOLATE, VANILLA, STRAWBERRY, BANANA, COFFEE, SHERBERT }
             public enum sizeType { SMALL, MEDIUM, LARGE }
@@ -28,7 +28,7 @@ namespace IceCreamGUI
             public double Cost { get; set; }
 
 
-            public IceCream()
+            public iceCream()
             {
                 Toppings = new List<toppingType>();
             }
