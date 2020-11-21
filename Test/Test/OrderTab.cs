@@ -1,21 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using static IceCreamGUI.frmMain;
+using static Test.frmMain;
 
-namespace IceCreamGUI
+namespace Test
 {
-    public partial class EmpDashboard : Form
+    public partial class OrderTab : Form
     {
-        public EmpDashboard()
+        public OrderTab()
         {
             InitializeComponent();
-        }
-
-        private void btnPay_Click(object sender, EventArgs e)
-        {
-            new CheckOut().Show();
-            this.Hide();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -67,6 +61,35 @@ namespace IceCreamGUI
             chkCookie.Checked = false;
             chkVanilla.Checked = false;
             chkNuts.Checked = false;
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            new CheckOut().Show();
+            this.Hide();
+        }
+
+        private void lstCart_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (IceCream I in lstCart.SelectedItems)
+            {
+                lblSize.Text = I.Size.ToString();
+                lblFlavor.Text = I.Flavor.ToString();
+                lblToppings.Text = I.Toppings.ToString();
+
+                foreach (IceCream.toppingType topping in I.Toppings)
+                    lblToppings.Text += topping.ToString();
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            lstCart.Items.Remove(lstCart.SelectedItem);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            lstCart.Items.Clear();
         }
     }
 }

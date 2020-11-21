@@ -1,0 +1,14 @@
+C:\Users\mickl\Desktop\Test\Test\bin\Debug\Test.exe.config
+C:\Users\mickl\Desktop\Test\Test\bin\Debug\Test.exe
+C:\Users\mickl\Desktop\Test\Test\bin\Debug\Test.pdb
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.EmployeeTab.resources
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.frmMain.resources
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.csproj.GenerateResource.cache
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.exe
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.pdb
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.CheckOut.resources
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.ManagerTab.resources
+C:\Users\mickl\Desktop\Test\Test\obj\Debug\Test.OrderTab.resources
