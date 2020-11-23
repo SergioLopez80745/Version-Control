@@ -49,21 +49,21 @@
             this.chkVanilla = new System.Windows.Forms.CheckBox();
             this.chkChocolate = new System.Windows.Forms.CheckBox();
             this.grpOrder = new System.Windows.Forms.GroupBox();
-            this.lstCart = new System.Windows.Forms.ListBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnPay = new System.Windows.Forms.Button();
             this.lblSize = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblToppings = new System.Windows.Forms.Label();
             this.lblFlavor = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTax = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblCost = new System.Windows.Forms.Label();
+            this.lblsubTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lstCart = new System.Windows.Forms.ListBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
             this.grpSize.SuspendLayout();
             this.grpToppings.SuspendLayout();
             this.grpMenuFlavors.SuspendLayout();
@@ -308,11 +308,11 @@
             this.grpOrder.Controls.Add(this.lblFlavor);
             this.grpOrder.Controls.Add(this.label4);
             this.grpOrder.Controls.Add(this.label5);
-            this.grpOrder.Controls.Add(this.label11);
-            this.grpOrder.Controls.Add(this.label10);
+            this.grpOrder.Controls.Add(this.lblTotal);
+            this.grpOrder.Controls.Add(this.lblTax);
             this.grpOrder.Controls.Add(this.label8);
             this.grpOrder.Controls.Add(this.label7);
-            this.grpOrder.Controls.Add(this.lblCost);
+            this.grpOrder.Controls.Add(this.lblsubTotal);
             this.grpOrder.Controls.Add(this.label2);
             this.grpOrder.Controls.Add(this.lstCart);
             this.grpOrder.Controls.Add(this.btnCancel);
@@ -323,34 +323,6 @@
             this.grpOrder.TabIndex = 0;
             this.grpOrder.TabStop = false;
             this.grpOrder.Text = "Order";
-            // 
-            // lstCart
-            // 
-            this.lstCart.FormattingEnabled = true;
-            this.lstCart.Location = new System.Drawing.Point(6, 69);
-            this.lstCart.Name = "lstCart";
-            this.lstCart.Size = new System.Drawing.Size(503, 329);
-            this.lstCart.TabIndex = 0;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(230, 620);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(132, 36);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "Cancel Order";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnPay
-            // 
-            this.btnPay.Location = new System.Drawing.Point(368, 597);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(141, 59);
-            this.btnPay.TabIndex = 11;
-            this.btnPay.Text = "Pay";
-            this.btnPay.UseVisualStyleBackColor = true;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // lblSize
             // 
@@ -406,23 +378,23 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Flavor:";
             // 
-            // label11
+            // lblTotal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(69, 472);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "label11";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(69, 472);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(41, 13);
+            this.lblTotal.TabIndex = 29;
+            this.lblTotal.Text = "label11";
             // 
-            // label10
+            // lblTax
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(69, 450);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "label10";
+            this.lblTax.AutoSize = true;
+            this.lblTax.Location = new System.Drawing.Point(69, 450);
+            this.lblTax.Name = "lblTax";
+            this.lblTax.Size = new System.Drawing.Size(41, 13);
+            this.lblTax.TabIndex = 28;
+            this.lblTax.Text = "label10";
             // 
             // label8
             // 
@@ -442,14 +414,14 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Tax:";
             // 
-            // lblCost
+            // lblsubTotal
             // 
-            this.lblCost.AutoSize = true;
-            this.lblCost.Location = new System.Drawing.Point(69, 428);
-            this.lblCost.Name = "lblCost";
-            this.lblCost.Size = new System.Drawing.Size(35, 13);
-            this.lblCost.TabIndex = 25;
-            this.lblCost.Text = "label5";
+            this.lblsubTotal.AutoSize = true;
+            this.lblsubTotal.Location = new System.Drawing.Point(69, 428);
+            this.lblsubTotal.Name = "lblsubTotal";
+            this.lblsubTotal.Size = new System.Drawing.Size(35, 13);
+            this.lblsubTotal.TabIndex = 25;
+            this.lblsubTotal.Text = "label5";
             // 
             // label2
             // 
@@ -459,6 +431,34 @@
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Sub Total:";
+            // 
+            // lstCart
+            // 
+            this.lstCart.FormattingEnabled = true;
+            this.lstCart.Location = new System.Drawing.Point(6, 69);
+            this.lstCart.Name = "lstCart";
+            this.lstCart.Size = new System.Drawing.Size(503, 329);
+            this.lstCart.TabIndex = 0;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(230, 620);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(132, 36);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel Order";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.Location = new System.Drawing.Point(368, 597);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(141, 59);
+            this.btnPay.TabIndex = 11;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // OrderTab
             // 
@@ -514,11 +514,11 @@
         private System.Windows.Forms.Label lblFlavor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblTax;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblCost;
+        private System.Windows.Forms.Label lblsubTotal;
         private System.Windows.Forms.Label label2;
     }
 }
