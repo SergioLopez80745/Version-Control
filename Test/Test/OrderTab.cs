@@ -65,8 +65,7 @@ namespace Test
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            new CheckOut().Show();
-            this.Hide();
+        
         }
 
         private void lstCart_SelectedIndexChanged(object sender, EventArgs e)
