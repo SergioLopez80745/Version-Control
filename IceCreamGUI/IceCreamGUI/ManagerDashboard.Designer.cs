@@ -38,8 +38,8 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnPrintInventory = new System.Windows.Forms.Button();
             this.btnViewSchedule = new System.Windows.Forms.Button();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtAddEmployee = new System.Windows.Forms.TextBox();
+            this.lblAddEmpId = new System.Windows.Forms.Label();
             this.btnUpdateSch = new System.Windows.Forms.Button();
             this.btnAddSch = new System.Windows.Forms.Button();
             this.btnRemoveSch = new System.Windows.Forms.Button();
@@ -55,6 +55,20 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblMon = new System.Windows.Forms.Label();
+            this.lblWed = new System.Windows.Forms.Label();
+            this.txtMon = new System.Windows.Forms.TextBox();
+            this.txtWed = new System.Windows.Forms.TextBox();
+            this.txtFri = new System.Windows.Forms.TextBox();
+            this.txtTues = new System.Windows.Forms.TextBox();
+            this.txtThur = new System.Windows.Forms.TextBox();
+            this.txtSun = new System.Windows.Forms.TextBox();
+            this.txtSat = new System.Windows.Forms.TextBox();
+            this.lblSun = new System.Windows.Forms.Label();
+            this.lblTues = new System.Windows.Forms.Label();
+            this.lblThur = new System.Windows.Forms.Label();
+            this.lblSat = new System.Windows.Forms.Label();
+            this.lblFri = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,21 +165,21 @@
             this.btnViewSchedule.UseVisualStyleBackColor = true;
             this.btnViewSchedule.Click += new System.EventHandler(this.btnViewSchedule_Click);
             // 
-            // txtTime
+            // txtAddEmployee
             // 
-            this.txtTime.Location = new System.Drawing.Point(727, 48);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(219, 20);
-            this.txtTime.TabIndex = 18;
+            this.txtAddEmployee.Location = new System.Drawing.Point(606, 48);
+            this.txtAddEmployee.Name = "txtAddEmployee";
+            this.txtAddEmployee.Size = new System.Drawing.Size(144, 20);
+            this.txtAddEmployee.TabIndex = 18;
             // 
-            // label1
+            // lblAddEmpId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(671, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Edit Time:";
+            this.lblAddEmpId.AutoSize = true;
+            this.lblAddEmpId.Location = new System.Drawing.Point(510, 55);
+            this.lblAddEmpId.Name = "lblAddEmpId";
+            this.lblAddEmpId.Size = new System.Drawing.Size(90, 13);
+            this.lblAddEmpId.TabIndex = 17;
+            this.lblAddEmpId.Text = "Add Employee Id:";
             // 
             // btnUpdateSch
             // 
@@ -290,12 +304,138 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "Password:";
             // 
+            // lblMon
+            // 
+            this.lblMon.AutoSize = true;
+            this.lblMon.Location = new System.Drawing.Point(552, 81);
+            this.lblMon.Name = "lblMon";
+            this.lblMon.Size = new System.Drawing.Size(48, 13);
+            this.lblMon.TabIndex = 36;
+            this.lblMon.Text = "Monday:";
+            // 
+            // lblWed
+            // 
+            this.lblWed.AutoSize = true;
+            this.lblWed.Location = new System.Drawing.Point(533, 107);
+            this.lblWed.Name = "lblWed";
+            this.lblWed.Size = new System.Drawing.Size(67, 13);
+            this.lblWed.TabIndex = 37;
+            this.lblWed.Text = "Wednesday:";
+            // 
+            // txtMon
+            // 
+            this.txtMon.Location = new System.Drawing.Point(606, 74);
+            this.txtMon.Name = "txtMon";
+            this.txtMon.Size = new System.Drawing.Size(144, 20);
+            this.txtMon.TabIndex = 38;
+            // 
+            // txtWed
+            // 
+            this.txtWed.Location = new System.Drawing.Point(606, 100);
+            this.txtWed.Name = "txtWed";
+            this.txtWed.Size = new System.Drawing.Size(144, 20);
+            this.txtWed.TabIndex = 39;
+            // 
+            // txtFri
+            // 
+            this.txtFri.Location = new System.Drawing.Point(606, 126);
+            this.txtFri.Name = "txtFri";
+            this.txtFri.Size = new System.Drawing.Size(144, 20);
+            this.txtFri.TabIndex = 40;
+            // 
+            // txtTues
+            // 
+            this.txtTues.Location = new System.Drawing.Point(849, 74);
+            this.txtTues.Name = "txtTues";
+            this.txtTues.Size = new System.Drawing.Size(144, 20);
+            this.txtTues.TabIndex = 41;
+            // 
+            // txtThur
+            // 
+            this.txtThur.Location = new System.Drawing.Point(849, 100);
+            this.txtThur.Name = "txtThur";
+            this.txtThur.Size = new System.Drawing.Size(144, 20);
+            this.txtThur.TabIndex = 42;
+            // 
+            // txtSun
+            // 
+            this.txtSun.Location = new System.Drawing.Point(849, 48);
+            this.txtSun.Name = "txtSun";
+            this.txtSun.Size = new System.Drawing.Size(144, 20);
+            this.txtSun.TabIndex = 43;
+            // 
+            // txtSat
+            // 
+            this.txtSat.Location = new System.Drawing.Point(849, 126);
+            this.txtSat.Name = "txtSat";
+            this.txtSat.Size = new System.Drawing.Size(144, 20);
+            this.txtSat.TabIndex = 44;
+            // 
+            // lblSun
+            // 
+            this.lblSun.AutoSize = true;
+            this.lblSun.Location = new System.Drawing.Point(797, 55);
+            this.lblSun.Name = "lblSun";
+            this.lblSun.Size = new System.Drawing.Size(46, 13);
+            this.lblSun.TabIndex = 45;
+            this.lblSun.Text = "Sunday:";
+            // 
+            // lblTues
+            // 
+            this.lblTues.AutoSize = true;
+            this.lblTues.Location = new System.Drawing.Point(792, 81);
+            this.lblTues.Name = "lblTues";
+            this.lblTues.Size = new System.Drawing.Size(51, 13);
+            this.lblTues.TabIndex = 46;
+            this.lblTues.Text = "Tuesday:";
+            // 
+            // lblThur
+            // 
+            this.lblThur.AutoSize = true;
+            this.lblThur.Location = new System.Drawing.Point(789, 107);
+            this.lblThur.Name = "lblThur";
+            this.lblThur.Size = new System.Drawing.Size(54, 13);
+            this.lblThur.TabIndex = 47;
+            this.lblThur.Text = "Thursday:";
+            // 
+            // lblSat
+            // 
+            this.lblSat.AutoSize = true;
+            this.lblSat.Location = new System.Drawing.Point(791, 133);
+            this.lblSat.Name = "lblSat";
+            this.lblSat.Size = new System.Drawing.Size(52, 13);
+            this.lblSat.TabIndex = 48;
+            this.lblSat.Text = "Saturday:";
+            // 
+            // lblFri
+            // 
+            this.lblFri.AutoSize = true;
+            this.lblFri.Location = new System.Drawing.Point(562, 133);
+            this.lblFri.Name = "lblFri";
+            this.lblFri.Size = new System.Drawing.Size(38, 13);
+            this.lblFri.TabIndex = 49;
+            this.lblFri.Text = "Friday:";
+            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1005, 586);
+            this.Controls.Add(this.lblFri);
+            this.Controls.Add(this.lblSat);
+            this.Controls.Add(this.lblThur);
+            this.Controls.Add(this.lblTues);
+            this.Controls.Add(this.lblSun);
+            this.Controls.Add(this.txtSat);
+            this.Controls.Add(this.txtSun);
+            this.Controls.Add(this.txtThur);
+            this.Controls.Add(this.txtTues);
+            this.Controls.Add(this.txtFri);
+            this.Controls.Add(this.txtWed);
+            this.Controls.Add(this.txtMon);
+            this.Controls.Add(this.lblWed);
+            this.Controls.Add(this.lblMon);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -311,8 +451,8 @@
             this.Controls.Add(this.btnUpdateSch);
             this.Controls.Add(this.btnAddSch);
             this.Controls.Add(this.btnRemoveSch);
-            this.Controls.Add(this.txtTime);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtAddEmployee);
+            this.Controls.Add(this.lblAddEmpId);
             this.Controls.Add(this.btnViewSchedule);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnPrintSchedule);
@@ -344,8 +484,8 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnPrintInventory;
         private System.Windows.Forms.Button btnViewSchedule;
-        private System.Windows.Forms.TextBox txtTime;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAddEmployee;
+        private System.Windows.Forms.Label lblAddEmpId;
         private System.Windows.Forms.Button btnUpdateSch;
         private System.Windows.Forms.Button btnAddSch;
         private System.Windows.Forms.Button btnRemoveSch;
@@ -361,5 +501,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblMon;
+        private System.Windows.Forms.Label lblWed;
+        private System.Windows.Forms.TextBox txtMon;
+        private System.Windows.Forms.TextBox txtWed;
+        private System.Windows.Forms.TextBox txtFri;
+        private System.Windows.Forms.TextBox txtTues;
+        private System.Windows.Forms.TextBox txtThur;
+        private System.Windows.Forms.TextBox txtSun;
+        private System.Windows.Forms.TextBox txtSat;
+        private System.Windows.Forms.Label lblSun;
+        private System.Windows.Forms.Label lblTues;
+        private System.Windows.Forms.Label lblThur;
+        private System.Windows.Forms.Label lblSat;
+        private System.Windows.Forms.Label lblFri;
     }
 }

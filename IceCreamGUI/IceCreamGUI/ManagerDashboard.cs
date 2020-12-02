@@ -59,8 +59,23 @@ namespace IceCreamGUI
             btnUpdateEmp.Hide();
 
             //schedule lables, text boxes and bottons
-            label1.Show();
-            txtTime.Show();
+            lblAddEmpId.Show();
+            lblSun.Show();
+            lblMon.Show();
+            lblTues.Show();
+            lblWed.Show();
+            lblThur.Show();
+            lblFri.Show();
+            lblSat.Show();
+            txtAddEmployee.Show();
+            txtSat.Show();
+            txtSun.Show();
+            txtMon.Show();
+            txtTues.Show();
+            txtWed.Show();
+            txtThur.Show();
+            txtFri.Show();
+
             btnAddSch.Show();
             btnRemoveSch.Show();
             btnUpdateSch.Show();
@@ -117,8 +132,23 @@ namespace IceCreamGUI
             btnUpdateEmp.Show();
 
             //schedule lables, text boxes and bottons
-            label1.Hide();
-            txtTime.Hide();
+            lblAddEmpId.Hide();
+            lblSun.Hide();
+            lblMon.Hide();
+            lblTues.Hide();
+            lblWed.Hide();
+            lblThur.Hide();
+            lblFri.Hide();
+            lblSat.Hide();
+            txtAddEmployee.Hide();
+            txtSat.Hide();
+            txtSun.Hide();
+            txtMon.Hide();
+            txtTues.Hide();
+            txtWed.Hide();
+            txtThur.Hide();
+            txtFri.Hide();
+
             btnAddSch.Hide();
             btnRemoveSch.Hide();
             btnUpdateSch.Hide();
@@ -126,20 +156,39 @@ namespace IceCreamGUI
 
         private void infoHide()
         {
-            label1.Hide();
+            //schedule
+            lblAddEmpId.Hide();
+            lblSun.Hide();
+            lblMon.Hide();
+            lblTues.Hide();
+            lblWed.Hide();
+            lblThur.Hide();
+            lblFri.Hide();
+            lblSat.Hide();
+            txtAddEmployee.Hide();
+            txtSat.Hide();
+            txtSun.Hide();
+            txtMon.Hide();
+            txtTues.Hide();
+            txtWed.Hide();
+            txtThur.Hide();
+            txtFri.Hide();
+
+            //employees
             label3.Hide();
             label4.Hide();
             label5.Hide();
             label6.Hide();
             label7.Hide();
             label8.Hide();
-            txtTime.Hide();
             txtFName.Hide();
             txtId.Hide();
             txtLName.Hide();
             txtPassword.Hide();
             txtPhone.Hide();
             txtUserName.Hide();
+            
+            //bouttons
             btnAddEmp.Hide();
             btnAddSch.Hide();
             btnRemoveEmp.Hide();
@@ -151,20 +200,36 @@ namespace IceCreamGUI
         //might not need this method??
         private void infoShow()
         {
-            label1.Show();
+            lblAddEmpId.Show();
+            lblSun.Show();
+            lblMon.Show();
+            lblTues.Show();
+            lblWed.Show();
+            lblThur.Show();
+            lblFri.Show();
+            lblSat.Show();
+            txtAddEmployee.Show();
+            txtSat.Show();
+            txtSun.Show();
+            txtMon.Show();
+            txtTues.Show();
+            txtWed.Show();
+            txtThur.Show();
+            txtFri.Show();
+
             label3.Show();
             label4.Show();
             label5.Show();
             label6.Show();
             label7.Show();
             label8.Show();
-            txtTime.Show();
             txtFName.Show();
             txtId.Show();
             txtLName.Show();
             txtPassword.Show();
             txtPhone.Show();
             txtUserName.Show();
+
             btnAddEmp.Show();
             btnAddSch.Show();
             btnRemoveEmp.Show();
