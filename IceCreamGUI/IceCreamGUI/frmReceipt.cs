@@ -24,6 +24,8 @@ namespace IceCreamGUI
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            EmployeeOptionTab ss = new EmployeeOptionTab();
+            ss.Show();
         }
 
         private void frmReceipt_Load(object sender, EventArgs e)

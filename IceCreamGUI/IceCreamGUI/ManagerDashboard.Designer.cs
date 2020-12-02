@@ -31,13 +31,32 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnViewEmp = new System.Windows.Forms.Button();
             this.btnViewItem = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnRemoveEmp = new System.Windows.Forms.Button();
+            this.btnAddEmp = new System.Windows.Forms.Button();
+            this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.btnPrintSchedule = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnPrintInventory = new System.Windows.Forms.Button();
             this.btnViewSchedule = new System.Windows.Forms.Button();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtDay = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnUpdateSch = new System.Windows.Forms.Button();
+            this.btnAddSch = new System.Windows.Forms.Button();
+            this.btnRemoveSch = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
+            this.txtLName = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +65,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 254);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(934, 264);
+            this.dataGridView1.Size = new System.Drawing.Size(981, 264);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnViewEmp
@@ -69,32 +88,32 @@
             this.btnViewItem.UseVisualStyleBackColor = true;
             this.btnViewItem.Click += new System.EventHandler(this.btnViewItem_Click);
             // 
-            // btnRemove
+            // btnRemoveEmp
             // 
-            this.btnRemove.Location = new System.Drawing.Point(174, 195);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(156, 53);
-            this.btnRemove.TabIndex = 5;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemoveEmp.Location = new System.Drawing.Point(174, 195);
+            this.btnRemoveEmp.Name = "btnRemoveEmp";
+            this.btnRemoveEmp.Size = new System.Drawing.Size(156, 53);
+            this.btnRemoveEmp.TabIndex = 5;
+            this.btnRemoveEmp.Text = "Remove Employee";
+            this.btnRemoveEmp.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // btnAddEmp
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 195);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(156, 53);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAddEmp.Location = new System.Drawing.Point(12, 195);
+            this.btnAddEmp.Name = "btnAddEmp";
+            this.btnAddEmp.Size = new System.Drawing.Size(156, 53);
+            this.btnAddEmp.TabIndex = 6;
+            this.btnAddEmp.Text = "Add Employee";
+            this.btnAddEmp.UseVisualStyleBackColor = true;
             // 
-            // btnUpdate
+            // btnUpdateEmp
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(336, 195);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(156, 53);
-            this.btnUpdate.TabIndex = 7;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdateEmp.Location = new System.Drawing.Point(336, 195);
+            this.btnUpdateEmp.Name = "btnUpdateEmp";
+            this.btnUpdateEmp.Size = new System.Drawing.Size(156, 53);
+            this.btnUpdateEmp.TabIndex = 7;
+            this.btnUpdateEmp.Text = "Update Employee";
+            this.btnUpdateEmp.UseVisualStyleBackColor = true;
             // 
             // btnPrintSchedule
             // 
@@ -107,7 +126,7 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(781, 524);
+            this.btnLogOut.Location = new System.Drawing.Point(828, 524);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(165, 50);
             this.btnLogOut.TabIndex = 14;
@@ -134,19 +153,193 @@
             this.btnViewSchedule.UseVisualStyleBackColor = true;
             this.btnViewSchedule.Click += new System.EventHandler(this.btnViewSchedule_Click);
             // 
+            // txtTime
+            // 
+            this.txtTime.Location = new System.Drawing.Point(727, 48);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(219, 20);
+            this.txtTime.TabIndex = 18;
+            // 
+            // txtDay
+            // 
+            this.txtDay.Location = new System.Drawing.Point(727, 91);
+            this.txtDay.Name = "txtDay";
+            this.txtDay.Size = new System.Drawing.Size(219, 20);
+            this.txtDay.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(671, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Edit Day:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(671, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Edit Time:";
+            // 
+            // btnUpdateSch
+            // 
+            this.btnUpdateSch.Location = new System.Drawing.Point(837, 195);
+            this.btnUpdateSch.Name = "btnUpdateSch";
+            this.btnUpdateSch.Size = new System.Drawing.Size(156, 53);
+            this.btnUpdateSch.TabIndex = 23;
+            this.btnUpdateSch.Text = "Update Schedule";
+            this.btnUpdateSch.UseVisualStyleBackColor = true;
+            // 
+            // btnAddSch
+            // 
+            this.btnAddSch.Location = new System.Drawing.Point(513, 195);
+            this.btnAddSch.Name = "btnAddSch";
+            this.btnAddSch.Size = new System.Drawing.Size(156, 53);
+            this.btnAddSch.TabIndex = 22;
+            this.btnAddSch.Text = "Add Schedule";
+            this.btnAddSch.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveSch
+            // 
+            this.btnRemoveSch.Location = new System.Drawing.Point(675, 195);
+            this.btnRemoveSch.Name = "btnRemoveSch";
+            this.btnRemoveSch.Size = new System.Drawing.Size(156, 53);
+            this.btnRemoveSch.TabIndex = 21;
+            this.btnRemoveSch.Text = "Remove Schedule";
+            this.btnRemoveSch.UseVisualStyleBackColor = true;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(80, 84);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(144, 20);
+            this.txtId.TabIndex = 24;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(348, 84);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(144, 20);
+            this.txtPhone.TabIndex = 25;
+            // 
+            // txtFName
+            // 
+            this.txtFName.Location = new System.Drawing.Point(80, 110);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(144, 20);
+            this.txtFName.TabIndex = 26;
+            // 
+            // txtLName
+            // 
+            this.txtLName.Location = new System.Drawing.Point(348, 110);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(144, 20);
+            this.txtLName.TabIndex = 27;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(80, 136);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(144, 20);
+            this.txtUserName.TabIndex = 28;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(348, 136);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(144, 20);
+            this.txtPassword.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Employee Id:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "First Name:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "UserName:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(291, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Phone #:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(281, 113);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Last Name:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(286, 139);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Password:";
+            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(958, 586);
+            this.ClientSize = new System.Drawing.Size(1005, 586);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.txtLName);
+            this.Controls.Add(this.txtFName);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btnUpdateSch);
+            this.Controls.Add(this.btnAddSch);
+            this.Controls.Add(this.btnRemoveSch);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.txtDay);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnViewSchedule);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnPrintSchedule);
             this.Controls.Add(this.btnPrintInventory);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnUpdateEmp);
+            this.Controls.Add(this.btnAddEmp);
+            this.Controls.Add(this.btnRemoveEmp);
             this.Controls.Add(this.btnViewItem);
             this.Controls.Add(this.btnViewEmp);
             this.Controls.Add(this.dataGridView1);
@@ -155,6 +348,7 @@
             this.Load += new System.EventHandler(this.ManagerDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -163,12 +357,31 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnViewEmp;
         private System.Windows.Forms.Button btnViewItem;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnRemoveEmp;
+        private System.Windows.Forms.Button btnAddEmp;
+        private System.Windows.Forms.Button btnUpdateEmp;
         private System.Windows.Forms.Button btnPrintSchedule;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnPrintInventory;
         private System.Windows.Forms.Button btnViewSchedule;
+        private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.TextBox txtDay;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnUpdateSch;
+        private System.Windows.Forms.Button btnAddSch;
+        private System.Windows.Forms.Button btnRemoveSch;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtFName;
+        private System.Windows.Forms.TextBox txtLName;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
