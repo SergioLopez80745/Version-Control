@@ -60,8 +60,6 @@ namespace IceCreamGUI
 
             //schedule lables, text boxes and bottons
             label1.Show();
-            label2.Show();
-            txtDay.Show();
             txtTime.Show();
             btnAddSch.Show();
             btnRemoveSch.Show();
@@ -120,8 +118,6 @@ namespace IceCreamGUI
 
             //schedule lables, text boxes and bottons
             label1.Hide();
-            label2.Hide();
-            txtDay.Hide();
             txtTime.Hide();
             btnAddSch.Hide();
             btnRemoveSch.Hide();
@@ -131,14 +127,12 @@ namespace IceCreamGUI
         private void infoHide()
         {
             label1.Hide();
-            label2.Hide();
             label3.Hide();
             label4.Hide();
             label5.Hide();
             label6.Hide();
             label7.Hide();
             label8.Hide();
-            txtDay.Hide();
             txtTime.Hide();
             txtFName.Hide();
             txtId.Hide();
@@ -158,14 +152,12 @@ namespace IceCreamGUI
         private void infoShow()
         {
             label1.Show();
-            label2.Show();
             label3.Show();
             label4.Show();
             label5.Show();
             label6.Show();
             label7.Show();
             label8.Show();
-            txtDay.Show();
             txtTime.Show();
             txtFName.Show();
             txtId.Show();

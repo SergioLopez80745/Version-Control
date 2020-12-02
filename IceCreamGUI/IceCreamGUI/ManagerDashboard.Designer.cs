@@ -39,8 +39,6 @@
             this.btnPrintInventory = new System.Windows.Forms.Button();
             this.btnViewSchedule = new System.Windows.Forms.Button();
             this.txtTime = new System.Windows.Forms.TextBox();
-            this.txtDay = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdateSch = new System.Windows.Forms.Button();
             this.btnAddSch = new System.Windows.Forms.Button();
@@ -159,22 +157,6 @@
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(219, 20);
             this.txtTime.TabIndex = 18;
-            // 
-            // txtDay
-            // 
-            this.txtDay.Location = new System.Drawing.Point(727, 91);
-            this.txtDay.Name = "txtDay";
-            this.txtDay.Size = new System.Drawing.Size(219, 20);
-            this.txtDay.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(671, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Edit Day:";
             // 
             // label1
             // 
@@ -330,8 +312,6 @@
             this.Controls.Add(this.btnAddSch);
             this.Controls.Add(this.btnRemoveSch);
             this.Controls.Add(this.txtTime);
-            this.Controls.Add(this.txtDay);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnViewSchedule);
             this.Controls.Add(this.btnLogOut);
@@ -365,8 +345,6 @@
         private System.Windows.Forms.Button btnPrintInventory;
         private System.Windows.Forms.Button btnViewSchedule;
         private System.Windows.Forms.TextBox txtTime;
-        private System.Windows.Forms.TextBox txtDay;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUpdateSch;
         private System.Windows.Forms.Button btnAddSch;
