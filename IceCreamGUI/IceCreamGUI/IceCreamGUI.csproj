@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckOut.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CheckOut.Designer.cs">
-      <DependentUpon>CheckOut.cs</DependentUpon>
-    </Compile>
     <Compile Include="EmployeeOptionTab.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmployeeOptionTab.Designer.cs">
       <DependentUpon>EmployeeOptionTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCardPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCardPayment.Designer.cs">
+      <DependentUpon>frmCardPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceipt.Designer.cs">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -78,11 +84,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CheckOut.resx">
-      <DependentUpon>CheckOut.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeOptionTab.resx">
       <DependentUpon>EmployeeOptionTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCardPayment.resx">
+      <DependentUpon>frmCardPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceipt.resx">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
