@@ -35,6 +35,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnMLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,16 +51,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(194, 117);
+            this.label2.Location = new System.Drawing.Point(153, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = " User ID:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(194, 145);
+            this.label3.Location = new System.Drawing.Point(153, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 2;
@@ -67,22 +68,22 @@
             // 
             // txtUserId
             // 
-            this.txtUserId.Location = new System.Drawing.Point(267, 117);
+            this.txtUserId.Location = new System.Drawing.Point(226, 99);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(268, 20);
-            this.txtUserId.TabIndex = 3;
+            this.txtUserId.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(267, 145);
+            this.txtPassword.Location = new System.Drawing.Point(226, 127);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(268, 20);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 3;
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnCancel.Location = new System.Drawing.Point(488, 268);
+            this.btnCancel.Location = new System.Drawing.Point(475, 209);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(123, 45);
             this.btnCancel.TabIndex = 6;
@@ -93,20 +94,32 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnLogin.Location = new System.Drawing.Point(359, 268);
+            this.btnLogin.Location = new System.Drawing.Point(346, 209);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(123, 45);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Employee Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnMLogin
+            // 
+            this.btnMLogin.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnMLogin.Location = new System.Drawing.Point(217, 209);
+            this.btnMLogin.Name = "btnMLogin";
+            this.btnMLogin.Size = new System.Drawing.Size(123, 45);
+            this.btnMLogin.TabIndex = 7;
+            this.btnMLogin.Text = "Manager Login";
+            this.btnMLogin.UseVisualStyleBackColor = false;
+            this.btnMLogin.Click += new System.EventHandler(this.btnMLogin_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(623, 325);
+            this.ClientSize = new System.Drawing.Size(610, 266);
+            this.Controls.Add(this.btnMLogin);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtPassword);
@@ -130,6 +143,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnMLogin;
     }
 }
 

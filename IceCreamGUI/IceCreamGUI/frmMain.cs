@@ -60,26 +60,41 @@ namespace IceCreamGUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUserId.Text == "Employee" && txtPassword.Text == "Password")
-            {
-                new EmployeeOptionTab().Show();
-               txtPassword.UseSystemPasswordChar = true;
-                this.Hide();
-            }
-            
-            else if (txtUserId.Text == "Manager" && txtPassword.Text == "Password")
-            {
-                new ManagerDashboard().Show();
-                txtPassword.UseSystemPasswordChar = true;
-                this.Hide();
-            }
+            SqlConnection con = new SqlConnection(@"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;");
+            SqlCommand cmd = new SqlCommand("Select * From Employee Where UserName ='" + txtUserId.Text + "' and Password = '" + txtPassword.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
 
+            if (dt.Rows.Count > 0)
+            {
+                this.Hide();
+                EmployeeOptionTab ss = new EmployeeOptionTab();
+                ss.Show();
+            }
             else
             {
                 MessageBox.Show("The UserId or Password you entered is incorrect.");
             }
+        }
+        private void btnMLogin_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;");
+            SqlCommand cmd = new SqlCommand("Select * From Manager Where UserName ='" + txtUserId.Text + "' and Password = '" + txtPassword.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
 
-
+            if (dt.Rows.Count > 0)
+            {
+                this.Hide();
+                ManagerDashboard ss = new ManagerDashboard();
+                ss.Show();
+            }
+            else
+            {
+                MessageBox.Show("The UserId or Password you entered is incorrect.");
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

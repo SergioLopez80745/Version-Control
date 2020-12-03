@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPay = new System.Windows.Forms.Button();
+            this.btnPayCash = new System.Windows.Forms.Button();
             this.grpOrder = new System.Windows.Forms.GroupBox();
+            this.txtTotalDue = new System.Windows.Forms.TextBox();
+            this.txtTax = new System.Windows.Forms.TextBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
+            this.btnTip = new System.Windows.Forms.Button();
+            this.btnPayDebit = new System.Windows.Forms.Button();
+            this.btnPayCredit = new System.Windows.Forms.Button();
             this.lstCart = new System.Windows.Forms.ListBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblCost = new System.Windows.Forms.Label();
+            this.lblTotalDue = new System.Windows.Forms.Label();
+            this.lblTax = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.grpMenuFlavors = new System.Windows.Forms.GroupBox();
             this.chkSherbert = new System.Windows.Forms.CheckBox();
             this.chkCoffee = new System.Windows.Forms.CheckBox();
@@ -59,105 +60,122 @@
             this.radSmall = new System.Windows.Forms.RadioButton();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.lblToppings = new System.Windows.Forms.Label();
-            this.lblFlavor = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblSize = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grpOrder.SuspendLayout();
             this.grpMenuFlavors.SuspendLayout();
             this.grpToppings.SuspendLayout();
             this.grpSize.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnPay
+            // btnPayCash
             // 
-            this.btnPay.Location = new System.Drawing.Point(368, 597);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(141, 59);
-            this.btnPay.TabIndex = 1;
-            this.btnPay.Text = "Pay";
-            this.btnPay.UseVisualStyleBackColor = true;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            this.btnPayCash.Location = new System.Drawing.Point(25, 532);
+            this.btnPayCash.Name = "btnPayCash";
+            this.btnPayCash.Size = new System.Drawing.Size(141, 59);
+            this.btnPayCash.TabIndex = 1;
+            this.btnPayCash.Text = "Pay Cash";
+            this.btnPayCash.UseVisualStyleBackColor = true;
+            this.btnPayCash.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // grpOrder
             // 
-            this.grpOrder.Controls.Add(this.lblSize);
-            this.grpOrder.Controls.Add(this.label9);
-            this.grpOrder.Controls.Add(this.lblToppings);
-            this.grpOrder.Controls.Add(this.lblFlavor);
-            this.grpOrder.Controls.Add(this.label4);
-            this.grpOrder.Controls.Add(this.label5);
+            this.grpOrder.Controls.Add(this.txtTotalDue);
+            this.grpOrder.Controls.Add(this.txtTax);
+            this.grpOrder.Controls.Add(this.txtSubTotal);
+            this.grpOrder.Controls.Add(this.btnTip);
+            this.grpOrder.Controls.Add(this.btnPayDebit);
+            this.grpOrder.Controls.Add(this.btnPayCredit);
             this.grpOrder.Controls.Add(this.lstCart);
-            this.grpOrder.Controls.Add(this.label11);
-            this.grpOrder.Controls.Add(this.label10);
-            this.grpOrder.Controls.Add(this.label8);
-            this.grpOrder.Controls.Add(this.label7);
-            this.grpOrder.Controls.Add(this.lblCost);
+            this.grpOrder.Controls.Add(this.lblTotalDue);
+            this.grpOrder.Controls.Add(this.lblTax);
             this.grpOrder.Controls.Add(this.label2);
-            this.grpOrder.Controls.Add(this.btnSend);
-            this.grpOrder.Controls.Add(this.btnCancel);
-            this.grpOrder.Controls.Add(this.btnPay);
-            this.grpOrder.Location = new System.Drawing.Point(12, 82);
+            this.grpOrder.Controls.Add(this.btnPayCash);
+            this.grpOrder.Location = new System.Drawing.Point(12, 12);
             this.grpOrder.Name = "grpOrder";
             this.grpOrder.Size = new System.Drawing.Size(515, 662);
             this.grpOrder.TabIndex = 3;
             this.grpOrder.TabStop = false;
             this.grpOrder.Text = "Order";
             // 
+            // txtTotalDue
+            // 
+            this.txtTotalDue.Location = new System.Drawing.Point(68, 479);
+            this.txtTotalDue.Name = "txtTotalDue";
+            this.txtTotalDue.ReadOnly = true;
+            this.txtTotalDue.Size = new System.Drawing.Size(80, 20);
+            this.txtTotalDue.TabIndex = 29;
+            // 
+            // txtTax
+            // 
+            this.txtTax.Location = new System.Drawing.Point(68, 453);
+            this.txtTax.Name = "txtTax";
+            this.txtTax.ReadOnly = true;
+            this.txtTax.Size = new System.Drawing.Size(80, 20);
+            this.txtTax.TabIndex = 28;
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.Location = new System.Drawing.Point(68, 427);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.ReadOnly = true;
+            this.txtSubTotal.Size = new System.Drawing.Size(80, 20);
+            this.txtSubTotal.TabIndex = 27;
+            // 
+            // btnTip
+            // 
+            this.btnTip.Location = new System.Drawing.Point(181, 597);
+            this.btnTip.Name = "btnTip";
+            this.btnTip.Size = new System.Drawing.Size(141, 59);
+            this.btnTip.TabIndex = 26;
+            this.btnTip.Text = "Tip";
+            this.btnTip.UseVisualStyleBackColor = true;
+            this.btnTip.Click += new System.EventHandler(this.btnTip_Click);
+            // 
+            // btnPayDebit
+            // 
+            this.btnPayDebit.Location = new System.Drawing.Point(349, 532);
+            this.btnPayDebit.Name = "btnPayDebit";
+            this.btnPayDebit.Size = new System.Drawing.Size(141, 59);
+            this.btnPayDebit.TabIndex = 25;
+            this.btnPayDebit.Text = "Pay Debit";
+            this.btnPayDebit.UseVisualStyleBackColor = true;
+            this.btnPayDebit.Click += new System.EventHandler(this.btnPayDebit_Click);
+            // 
+            // btnPayCredit
+            // 
+            this.btnPayCredit.Location = new System.Drawing.Point(181, 532);
+            this.btnPayCredit.Name = "btnPayCredit";
+            this.btnPayCredit.Size = new System.Drawing.Size(141, 59);
+            this.btnPayCredit.TabIndex = 24;
+            this.btnPayCredit.Text = "Pay Credit";
+            this.btnPayCredit.UseVisualStyleBackColor = true;
+            this.btnPayCredit.Click += new System.EventHandler(this.btnPayCredit_Click);
+            // 
             // lstCart
             // 
             this.lstCart.FormattingEnabled = true;
             this.lstCart.Location = new System.Drawing.Point(6, 69);
             this.lstCart.Name = "lstCart";
-            this.lstCart.Size = new System.Drawing.Size(503, 329);
+            this.lstCart.Size = new System.Drawing.Size(503, 355);
             this.lstCart.TabIndex = 17;
             // 
-            // label11
+            // lblTotalDue
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(69, 474);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "label11";
+            this.lblTotalDue.AutoSize = true;
+            this.lblTotalDue.Location = new System.Drawing.Point(5, 482);
+            this.lblTotalDue.Name = "lblTotalDue";
+            this.lblTotalDue.Size = new System.Drawing.Size(57, 13);
+            this.lblTotalDue.TabIndex = 12;
+            this.lblTotalDue.Text = "Total Due:";
             // 
-            // label10
+            // lblTax
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(69, 452);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "label10";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 474);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Total Due:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 452);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Tax:";
-            // 
-            // lblCost
-            // 
-            this.lblCost.AutoSize = true;
-            this.lblCost.Location = new System.Drawing.Point(69, 430);
-            this.lblCost.Name = "lblCost";
-            this.lblCost.Size = new System.Drawing.Size(35, 13);
-            this.lblCost.TabIndex = 9;
-            this.lblCost.Text = "label5";
+            this.lblTax.AutoSize = true;
+            this.lblTax.Location = new System.Drawing.Point(34, 460);
+            this.lblTax.Name = "lblTax";
+            this.lblTax.Size = new System.Drawing.Size(28, 13);
+            this.lblTax.TabIndex = 11;
+            this.lblTax.Text = "Tax:";
             // 
             // label2
             // 
@@ -168,24 +186,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Sub Total:";
             // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(377, 542);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(132, 36);
-            this.btnSend.TabIndex = 4;
-            this.btnSend.Text = "Send Order";
-            this.btnSend.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(239, 542);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(132, 36);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Cancel Order";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
             // grpMenuFlavors
             // 
             this.grpMenuFlavors.Controls.Add(this.chkSherbert);
@@ -194,7 +194,7 @@
             this.grpMenuFlavors.Controls.Add(this.chkStrawberry);
             this.grpMenuFlavors.Controls.Add(this.chkVanilla);
             this.grpMenuFlavors.Controls.Add(this.chkChocolate);
-            this.grpMenuFlavors.Location = new System.Drawing.Point(533, 209);
+            this.grpMenuFlavors.Location = new System.Drawing.Point(533, 139);
             this.grpMenuFlavors.Name = "grpMenuFlavors";
             this.grpMenuFlavors.Size = new System.Drawing.Size(442, 232);
             this.grpMenuFlavors.TabIndex = 4;
@@ -275,7 +275,7 @@
             this.grpToppings.Controls.Add(this.chkChocolateChip);
             this.grpToppings.Controls.Add(this.chkCookie);
             this.grpToppings.Controls.Add(this.chkSprinkles);
-            this.grpToppings.Location = new System.Drawing.Point(539, 447);
+            this.grpToppings.Location = new System.Drawing.Point(539, 377);
             this.grpToppings.Name = "grpToppings";
             this.grpToppings.Size = new System.Drawing.Size(442, 232);
             this.grpToppings.TabIndex = 5;
@@ -353,7 +353,7 @@
             this.grpSize.Controls.Add(this.radMedium);
             this.grpSize.Controls.Add(this.radLarge);
             this.grpSize.Controls.Add(this.radSmall);
-            this.grpSize.Location = new System.Drawing.Point(533, 82);
+            this.grpSize.Location = new System.Drawing.Point(533, 12);
             this.grpSize.Name = "grpSize";
             this.grpSize.Size = new System.Drawing.Size(442, 121);
             this.grpSize.TabIndex = 6;
@@ -398,7 +398,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(834, 685);
+            this.btnAdd.Location = new System.Drawing.Point(834, 615);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(141, 59);
             this.btnAdd.TabIndex = 7;
@@ -408,73 +408,31 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(687, 685);
+            this.btnRemove.Location = new System.Drawing.Point(687, 615);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(141, 59);
             this.btnRemove.TabIndex = 8;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // lblToppings
+            // btnCancel
             // 
-            this.lblToppings.AutoSize = true;
-            this.lblToppings.Location = new System.Drawing.Point(299, 474);
-            this.lblToppings.Name = "lblToppings";
-            this.lblToppings.Size = new System.Drawing.Size(35, 13);
-            this.lblToppings.TabIndex = 21;
-            this.lblToppings.Text = "label1";
-            // 
-            // lblFlavor
-            // 
-            this.lblFlavor.AutoSize = true;
-            this.lblFlavor.Location = new System.Drawing.Point(299, 452);
-            this.lblFlavor.Name = "lblFlavor";
-            this.lblFlavor.Size = new System.Drawing.Size(35, 13);
-            this.lblFlavor.TabIndex = 20;
-            this.lblFlavor.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(236, 474);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Toppings:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(236, 452);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Flavor:";
-            // 
-            // lblSize
-            // 
-            this.lblSize.AutoSize = true;
-            this.lblSize.Location = new System.Drawing.Point(299, 430);
-            this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(35, 13);
-            this.lblSize.TabIndex = 23;
-            this.lblSize.Text = "label6";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(236, 430);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Size:";
+            this.btnCancel.Location = new System.Drawing.Point(540, 615);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(141, 59);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel Order";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // EmpDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(987, 756);
+            this.ClientSize = new System.Drawing.Size(987, 683);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grpSize);
@@ -483,6 +441,7 @@
             this.Controls.Add(this.grpOrder);
             this.Name = "EmpDashboard";
             this.Text = "Empolyee Dashboard";
+            this.Load += new System.EventHandler(this.EmpDashboard_Load);
             this.grpOrder.ResumeLayout(false);
             this.grpOrder.PerformLayout();
             this.grpMenuFlavors.ResumeLayout(false);
@@ -493,17 +452,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button btnPayCash;
         private System.Windows.Forms.GroupBox grpOrder;
         private System.Windows.Forms.ListBox lstCart;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblCost;
+        private System.Windows.Forms.Label lblTotalDue;
+        private System.Windows.Forms.Label lblTax;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.GroupBox grpMenuFlavors;
         private System.Windows.Forms.GroupBox grpToppings;
         private System.Windows.Forms.CheckBox chkNuts;
@@ -516,19 +470,20 @@
         private System.Windows.Forms.RadioButton radMedium;
         private System.Windows.Forms.RadioButton radLarge;
         private System.Windows.Forms.RadioButton radSmall;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnPayDebit;
+        private System.Windows.Forms.Button btnPayCredit;
+        private System.Windows.Forms.Button btnTip;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtTotalDue;
+        private System.Windows.Forms.TextBox txtTax;
+        private System.Windows.Forms.TextBox txtSubTotal;
         private System.Windows.Forms.CheckBox chkSherbert;
         private System.Windows.Forms.CheckBox chkCoffee;
         private System.Windows.Forms.CheckBox chkBanana;
         private System.Windows.Forms.CheckBox chkStrawberry;
         private System.Windows.Forms.CheckBox chkVanilla;
         private System.Windows.Forms.CheckBox chkChocolate;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Label lblSize;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblToppings;
-        private System.Windows.Forms.Label lblFlavor;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
     }
 }
