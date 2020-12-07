@@ -26,7 +26,6 @@ C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceC
 C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.exe
 C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.pdb
 C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csprojAssemblyReference.cache
-C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.CheckOut.resources
 C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.EmployeeOptionTab.resources
 C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.frmMain.resources
 C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.EmpDashboard.resources
@@ -66,3 +65,21 @@ C:\Users\mickl\Desktop\Version Control December 1\Version-Control-Mick\IceCreamG
 C:\Users\mickl\Desktop\Version Control December 1\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csproj.CoreCompileInputs.cache
 C:\Users\mickl\Desktop\Version Control December 1\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.exe
 C:\Users\mickl\Desktop\Version Control December 1\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.pdb
+C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.frmCardPayment.resources
+C:\Users\kino9\OneDrive\Documents\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.frmReceipt.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.exe.config
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.exe
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\bin\Debug\IceCreamGUI.pdb
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csprojAssemblyReference.cache
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.EmployeeOptionTab.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.frmCardPayment.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.frmReceipt.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.frmMain.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.EmpDashboard.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.ManagerDashboard.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.Properties.Resources.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.StandardReceipt.resources
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csproj.GenerateResource.cache
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.csproj.CoreCompileInputs.cache
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.exe
+C:\Users\mickl\Desktop\Version-Control-Mick\Version-Control-Mick\IceCreamGUI\IceCreamGUI\obj\Debug\IceCreamGUI.pdb

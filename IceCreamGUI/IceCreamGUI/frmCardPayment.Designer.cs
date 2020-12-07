@@ -39,6 +39,7 @@
             this.txtSecurityCode = new System.Windows.Forms.TextBox();
             this.txtZip = new System.Windows.Forms.TextBox();
             this.btnPay = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -131,11 +132,22 @@
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(176, 332);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(123, 42);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmCardPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 392);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.txtZip);
             this.Controls.Add(this.txtSecurityCode);
@@ -149,6 +161,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmCardPayment";
             this.Text = "Card Payment";
+            this.Load += new System.EventHandler(this.frmCardPayment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,11 +174,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtCardNum;
-        private System.Windows.Forms.TextBox txtExpire;
-        private System.Windows.Forms.TextBox txtSecurityCode;
-        private System.Windows.Forms.TextBox txtZip;
         private System.Windows.Forms.Button btnPay;
+        public System.Windows.Forms.TextBox txtCardNum;
+        public System.Windows.Forms.TextBox txtExpire;
+        public System.Windows.Forms.TextBox txtSecurityCode;
+        public System.Windows.Forms.TextBox txtZip;
+        public System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnExit;
     }
 }
