@@ -242,5 +242,53 @@ namespace IceCreamGUI
         {
             infoHide();
         }
+
+        private void btnAddEmp_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text != "" && txtFName.Text != "" && txtLName.Text != "" && txtPhone.Text != "" && txtUserName.Text != "" && txtPassword.Text != "")
+            {
+                cmd = new SqlCommand("insert into Employee(Employee Id,Fname,LName,Phone#,UserName,Password) valeus(@employeeid,@fname,@lname,@phone#,@username,@password)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@employeeid", txtId);
+                cmd.Parameters.AddWithValue("@fname", txtFName);
+                cmd.Parameters.AddWithValue("@lname", txtLName);
+                cmd.Parameters.AddWithValue("@phone#", txtPhone);
+                cmd.Parameters.AddWithValue("@username", txtUserName);
+                cmd.Parameters.AddWithValue("@password", txtPassword);
+                //cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+                DisplayDataEmp();
+                ClearData();
+            }
+
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+        }
+
+        //Display Data in DataGridView  
+        private void DisplayDataEmp()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("Select * From Employee", con);
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
+        //Clear Data  
+        private void ClearData()
+        {
+            txtId.Text = "";
+            txtFName.Text = "";
+            txtLName.Text = "";
+            txtPhone.Text = "";
+            txtUserName.Text = "";
+            txtPassword.Text = "";
+            ID = 0;
+        }
     }
 }

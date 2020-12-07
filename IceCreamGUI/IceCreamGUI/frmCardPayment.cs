@@ -16,16 +16,71 @@ namespace IceCreamGUI
         {
             InitializeComponent();
         }
+        public static string passingText;
+        public static string passingText2;
+        public static string passingText3;
+        public static string passingText4;
+        public static string passingText5;
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            string Name = txtName.Text;
-            string CardNumber = txtCardNum.Text;
-            string ExpireDate = txtExpire.Text;
-            string Zipcode = txtZip.Text;
+            if ((txtName.Text.Trim() == String.Empty))
+            {
+
+                MessageBox.Show("Please input information");
+
+            }
+            else if ((txtCardNum.Text.Trim() == String.Empty))
+            {
+                MessageBox.Show("Please input information");
+
+
+            }
+            else if ((txtExpire.Text.Trim() == String.Empty))
+            {
+                MessageBox.Show("Please input information");
+
+
+            }
+            else if ((txtSecurityCode.Text.Trim() == String.Empty))
+            {
+                MessageBox.Show("Please input information");
+
+
+            }
+            else if ((txtZip.Text.Trim() == String.Empty))
+            {
+                MessageBox.Show("Please input information");
+
+
+            }
+            else
+            {
+                passingText = txtName.Text;
+                passingText2 = txtCardNum.Text;
+                passingText3 = txtExpire.Text;
+                passingText4 = txtSecurityCode.Text;
+                passingText5 = txtZip.Text;
+                new frmReceipt().Show();
+                this.Hide();
+            }
+
+
             new frmReceipt().Show();
             this.Hide();
         }
 
+        private void frmCardPayment_Load(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+           
+            new EmpDashboard().Show();
+            Close();
+        }
     }
 }

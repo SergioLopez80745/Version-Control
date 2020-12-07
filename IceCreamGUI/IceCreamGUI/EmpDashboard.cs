@@ -14,7 +14,7 @@ namespace IceCreamGUI
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            new frmReceipt().Show();
+            new StandardReceipt().Show();
             this.Hide();
         }
 
@@ -38,27 +38,27 @@ namespace IceCreamGUI
             }
             
             //flavor
-            if (chkChocolate.Checked == true)
+            if (radChocolate.Checked == true)
             {
                 IceCream.Flavor = frmMain.IceCream.flavorType.CHOCOLATE;
             }
-            else if (chkVanilla.Checked == true)
+            else if (radVanilla.Checked == true)
             {
                 IceCream.Flavor = frmMain.IceCream.flavorType.VANILLA;
             }
-            else if (chkStrawberry.Checked == true)
+            else if (radStrawberry.Checked == true)
             {
                 IceCream.Flavor = frmMain.IceCream.flavorType.STRAWBERRY;
             }
-            else if (chkSherbert.Checked == true)
+            else if (radSherbert.Checked == true)
             {
                 IceCream.Flavor = frmMain.IceCream.flavorType.SHERBERT;
             }
-            else if (chkCoffee.Checked == true)
+            else if (radCoffee.Checked == true)
             {
                 IceCream.Flavor = frmMain.IceCream.flavorType.COFFEE;
             }
-            else if (chkBanana.Checked == true)
+            else if (radBanana.Checked == true)
             {
                 IceCream.Flavor = frmMain.IceCream.flavorType.BANANA;
             }
@@ -105,13 +105,54 @@ namespace IceCreamGUI
                 totalIceCream += icecream.Cost;
 
             double tax = 8.25;
-            double totalOrder = (totalIceCream * tax) / 100;
+            
+            double tip = 0;
 
+
+            double totalOrder = (totalIceCream * tax) / 100;
+            txtTax.Text = totalOrder.ToString("C2");
             txtSubTotal.Text = totalIceCream.ToString("C2");
 
-            txtTax.Text = totalOrder.ToString("C2");
-            txtTotalDue.Text = (totalIceCream + totalOrder).ToString("C2");
+            if (radFivePercent.Checked == true)
+            {
+                double percent = 0.05;
+                tip = (totalIceCream * percent);
+                txtTip.Text = tip.ToString("C2");
+                txtTax.Text = totalOrder.ToString("C2");
+                txtTotalDue.Text = (totalIceCream + totalOrder + tip).ToString("C2");
+            }
+            else if (radTenPercent.Checked == true)
+            {
+                double percent = 0.10;
+                tip = (totalIceCream * percent);
+                txtTip.Text = tip.ToString("C2");
+                txtTax.Text = totalOrder.ToString("C2");
+                txtTotalDue.Text = (totalIceCream + totalOrder + tip).ToString("C2");
 
+            }
+            else if (radFifteenPercent.Checked == true)
+            {
+                double percent = 0.15;
+                tip = (totalIceCream * percent);
+                txtTip.Text = tip.ToString("C2");
+                txtTax.Text = totalOrder.ToString("C2");
+                txtTotalDue.Text = (totalIceCream + totalOrder + tip).ToString("C2");
+            }
+            else if (radTwentyPercent.Checked == true)
+            {
+                double percent = 0.20;
+                tip = (totalIceCream * percent);
+                txtTip.Text = tip.ToString("C2");
+                txtTax.Text = totalOrder.ToString("C2");
+                txtTotalDue.Text = (totalIceCream + totalOrder + tip).ToString("C2");
+            }
+
+            else
+            {
+                txtTip.Text = tip.ToString("C2");
+                txtTax.Text = totalOrder.ToString("C2");
+                txtTotalDue.Text = (totalIceCream + totalOrder).ToString("C2");
+            }
             //will call to reset form
             ResetForm();
         }
@@ -139,17 +180,17 @@ namespace IceCreamGUI
         private void ResetForm()
         {
             radSmall.Checked = true;
-            chkChocolate.Checked = true;
+            radChocolate.Checked = true;
             chkSprinkles.Checked = true;
-            chkStrawberry.Checked = false;
-            chkSherbert.Checked = false;
+            radStrawberry.Checked = false;
+            radSherbert.Checked = false;
             chkOreos.Checked = false;
             chkChocolateChip.Checked = false;
-            chkBanana.Checked = false;
+            radBanana.Checked = false;
             chkCereal.Checked = false;
-            chkCoffee.Checked = false;
+            radCoffee.Checked = false;
             chkCookie.Checked = false;
-            chkVanilla.Checked = false;
+            radVanilla.Checked = false;
             chkNuts.Checked = false;
         }
 
@@ -190,17 +231,17 @@ namespace IceCreamGUI
         private void EmpDashboard_Load(object sender, EventArgs e)
         {
             radSmall.Checked = true;
-            chkChocolate.Checked = true;
+            radChocolate.Checked = true;
             chkSprinkles.Checked = true;
-            chkStrawberry.Checked = false;
-            chkSherbert.Checked = false;
+            radStrawberry.Checked = false;
+            radSherbert.Checked = false;
             chkOreos.Checked = false;
             chkChocolateChip.Checked = false;
-            chkBanana.Checked = false;
+            radBanana.Checked = false;
             chkCereal.Checked = false;
-            chkCoffee.Checked = false;
+            radCoffee.Checked = false;
             chkCookie.Checked = false;
-            chkVanilla.Checked = false;
+            radVanilla.Checked = false;
             chkNuts.Checked = false;
 
             

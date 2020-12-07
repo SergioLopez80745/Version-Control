@@ -30,10 +30,15 @@
         {
             this.btnPayCash = new System.Windows.Forms.Button();
             this.grpOrder = new System.Windows.Forms.GroupBox();
+            this.radTwentyPercent = new System.Windows.Forms.RadioButton();
+            this.radFifteenPercent = new System.Windows.Forms.RadioButton();
+            this.radTenPercent = new System.Windows.Forms.RadioButton();
+            this.radFivePercent = new System.Windows.Forms.RadioButton();
+            this.txtTip = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtTotalDue = new System.Windows.Forms.TextBox();
             this.txtTax = new System.Windows.Forms.TextBox();
             this.txtSubTotal = new System.Windows.Forms.TextBox();
-            this.btnTip = new System.Windows.Forms.Button();
             this.btnPayDebit = new System.Windows.Forms.Button();
             this.btnPayCredit = new System.Windows.Forms.Button();
             this.lstCart = new System.Windows.Forms.ListBox();
@@ -41,12 +46,6 @@
             this.lblTax = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.grpMenuFlavors = new System.Windows.Forms.GroupBox();
-            this.chkSherbert = new System.Windows.Forms.CheckBox();
-            this.chkCoffee = new System.Windows.Forms.CheckBox();
-            this.chkBanana = new System.Windows.Forms.CheckBox();
-            this.chkStrawberry = new System.Windows.Forms.CheckBox();
-            this.chkVanilla = new System.Windows.Forms.CheckBox();
-            this.chkChocolate = new System.Windows.Forms.CheckBox();
             this.grpToppings = new System.Windows.Forms.GroupBox();
             this.chkNuts = new System.Windows.Forms.CheckBox();
             this.chkCereal = new System.Windows.Forms.CheckBox();
@@ -61,6 +60,12 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.radChocolate = new System.Windows.Forms.RadioButton();
+            this.radVanilla = new System.Windows.Forms.RadioButton();
+            this.radStrawberry = new System.Windows.Forms.RadioButton();
+            this.radSherbert = new System.Windows.Forms.RadioButton();
+            this.radCoffee = new System.Windows.Forms.RadioButton();
+            this.radBanana = new System.Windows.Forms.RadioButton();
             this.grpOrder.SuspendLayout();
             this.grpMenuFlavors.SuspendLayout();
             this.grpToppings.SuspendLayout();
@@ -79,10 +84,15 @@
             // 
             // grpOrder
             // 
+            this.grpOrder.Controls.Add(this.radTwentyPercent);
+            this.grpOrder.Controls.Add(this.radFifteenPercent);
+            this.grpOrder.Controls.Add(this.radTenPercent);
+            this.grpOrder.Controls.Add(this.radFivePercent);
+            this.grpOrder.Controls.Add(this.txtTip);
+            this.grpOrder.Controls.Add(this.label1);
             this.grpOrder.Controls.Add(this.txtTotalDue);
             this.grpOrder.Controls.Add(this.txtTax);
             this.grpOrder.Controls.Add(this.txtSubTotal);
-            this.grpOrder.Controls.Add(this.btnTip);
             this.grpOrder.Controls.Add(this.btnPayDebit);
             this.grpOrder.Controls.Add(this.btnPayCredit);
             this.grpOrder.Controls.Add(this.lstCart);
@@ -96,6 +106,71 @@
             this.grpOrder.TabIndex = 3;
             this.grpOrder.TabStop = false;
             this.grpOrder.Text = "Order";
+            // 
+            // radTwentyPercent
+            // 
+            this.radTwentyPercent.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radTwentyPercent.Location = new System.Drawing.Point(310, 491);
+            this.radTwentyPercent.Name = "radTwentyPercent";
+            this.radTwentyPercent.Size = new System.Drawing.Size(88, 34);
+            this.radTwentyPercent.TabIndex = 34;
+            this.radTwentyPercent.TabStop = true;
+            this.radTwentyPercent.Text = "20% Tip";
+            this.radTwentyPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radTwentyPercent.UseVisualStyleBackColor = true;
+            // 
+            // radFifteenPercent
+            // 
+            this.radFifteenPercent.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radFifteenPercent.Location = new System.Drawing.Point(181, 492);
+            this.radFifteenPercent.Name = "radFifteenPercent";
+            this.radFifteenPercent.Size = new System.Drawing.Size(88, 34);
+            this.radFifteenPercent.TabIndex = 33;
+            this.radFifteenPercent.TabStop = true;
+            this.radFifteenPercent.Text = "15% Tip";
+            this.radFifteenPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radFifteenPercent.UseVisualStyleBackColor = true;
+            // 
+            // radTenPercent
+            // 
+            this.radTenPercent.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radTenPercent.Location = new System.Drawing.Point(310, 439);
+            this.radTenPercent.Name = "radTenPercent";
+            this.radTenPercent.Size = new System.Drawing.Size(88, 34);
+            this.radTenPercent.TabIndex = 32;
+            this.radTenPercent.TabStop = true;
+            this.radTenPercent.Text = "10% Tip";
+            this.radTenPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radTenPercent.UseVisualStyleBackColor = true;
+            // 
+            // radFivePercent
+            // 
+            this.radFivePercent.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radFivePercent.Location = new System.Drawing.Point(181, 439);
+            this.radFivePercent.Name = "radFivePercent";
+            this.radFivePercent.Size = new System.Drawing.Size(88, 34);
+            this.radFivePercent.TabIndex = 13;
+            this.radFivePercent.TabStop = true;
+            this.radFivePercent.Text = "5% Tip";
+            this.radFivePercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radFivePercent.UseVisualStyleBackColor = true;
+            // 
+            // txtTip
+            // 
+            this.txtTip.Location = new System.Drawing.Point(68, 505);
+            this.txtTip.Name = "txtTip";
+            this.txtTip.ReadOnly = true;
+            this.txtTip.Size = new System.Drawing.Size(80, 20);
+            this.txtTip.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 512);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Tax: ";
             // 
             // txtTotalDue
             // 
@@ -120,16 +195,6 @@
             this.txtSubTotal.ReadOnly = true;
             this.txtSubTotal.Size = new System.Drawing.Size(80, 20);
             this.txtSubTotal.TabIndex = 27;
-            // 
-            // btnTip
-            // 
-            this.btnTip.Location = new System.Drawing.Point(181, 597);
-            this.btnTip.Name = "btnTip";
-            this.btnTip.Size = new System.Drawing.Size(141, 59);
-            this.btnTip.TabIndex = 26;
-            this.btnTip.Text = "Tip";
-            this.btnTip.UseVisualStyleBackColor = true;
-            this.btnTip.Click += new System.EventHandler(this.btnTip_Click);
             // 
             // btnPayDebit
             // 
@@ -188,84 +253,18 @@
             // 
             // grpMenuFlavors
             // 
-            this.grpMenuFlavors.Controls.Add(this.chkSherbert);
-            this.grpMenuFlavors.Controls.Add(this.chkCoffee);
-            this.grpMenuFlavors.Controls.Add(this.chkBanana);
-            this.grpMenuFlavors.Controls.Add(this.chkStrawberry);
-            this.grpMenuFlavors.Controls.Add(this.chkVanilla);
-            this.grpMenuFlavors.Controls.Add(this.chkChocolate);
+            this.grpMenuFlavors.Controls.Add(this.radBanana);
+            this.grpMenuFlavors.Controls.Add(this.radCoffee);
+            this.grpMenuFlavors.Controls.Add(this.radSherbert);
+            this.grpMenuFlavors.Controls.Add(this.radStrawberry);
+            this.grpMenuFlavors.Controls.Add(this.radVanilla);
+            this.grpMenuFlavors.Controls.Add(this.radChocolate);
             this.grpMenuFlavors.Location = new System.Drawing.Point(533, 139);
             this.grpMenuFlavors.Name = "grpMenuFlavors";
             this.grpMenuFlavors.Size = new System.Drawing.Size(442, 232);
             this.grpMenuFlavors.TabIndex = 4;
             this.grpMenuFlavors.TabStop = false;
             this.grpMenuFlavors.Text = "Menu Flavors";
-            // 
-            // chkSherbert
-            // 
-            this.chkSherbert.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkSherbert.Location = new System.Drawing.Point(300, 97);
-            this.chkSherbert.Name = "chkSherbert";
-            this.chkSherbert.Size = new System.Drawing.Size(131, 64);
-            this.chkSherbert.TabIndex = 25;
-            this.chkSherbert.Text = "Sherbert";
-            this.chkSherbert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkSherbert.UseVisualStyleBackColor = true;
-            // 
-            // chkCoffee
-            // 
-            this.chkCoffee.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkCoffee.Location = new System.Drawing.Point(153, 97);
-            this.chkCoffee.Name = "chkCoffee";
-            this.chkCoffee.Size = new System.Drawing.Size(131, 64);
-            this.chkCoffee.TabIndex = 24;
-            this.chkCoffee.Text = "Coffee";
-            this.chkCoffee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkCoffee.UseVisualStyleBackColor = true;
-            // 
-            // chkBanana
-            // 
-            this.chkBanana.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkBanana.Location = new System.Drawing.Point(6, 97);
-            this.chkBanana.Name = "chkBanana";
-            this.chkBanana.Size = new System.Drawing.Size(131, 64);
-            this.chkBanana.TabIndex = 23;
-            this.chkBanana.Text = "Banana";
-            this.chkBanana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkBanana.UseVisualStyleBackColor = true;
-            // 
-            // chkStrawberry
-            // 
-            this.chkStrawberry.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkStrawberry.Location = new System.Drawing.Point(300, 27);
-            this.chkStrawberry.Name = "chkStrawberry";
-            this.chkStrawberry.Size = new System.Drawing.Size(131, 64);
-            this.chkStrawberry.TabIndex = 22;
-            this.chkStrawberry.Text = "Strawberry";
-            this.chkStrawberry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkStrawberry.UseVisualStyleBackColor = true;
-            // 
-            // chkVanilla
-            // 
-            this.chkVanilla.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkVanilla.Location = new System.Drawing.Point(153, 27);
-            this.chkVanilla.Name = "chkVanilla";
-            this.chkVanilla.Size = new System.Drawing.Size(131, 64);
-            this.chkVanilla.TabIndex = 21;
-            this.chkVanilla.Text = "Vanilla";
-            this.chkVanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkVanilla.UseVisualStyleBackColor = true;
-            // 
-            // chkChocolate
-            // 
-            this.chkChocolate.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkChocolate.Location = new System.Drawing.Point(6, 27);
-            this.chkChocolate.Name = "chkChocolate";
-            this.chkChocolate.Size = new System.Drawing.Size(131, 64);
-            this.chkChocolate.TabIndex = 20;
-            this.chkChocolate.Text = "Chocolate";
-            this.chkChocolate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkChocolate.UseVisualStyleBackColor = true;
             // 
             // grpToppings
             // 
@@ -426,6 +425,78 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // radChocolate
+            // 
+            this.radChocolate.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radChocolate.Location = new System.Drawing.Point(17, 42);
+            this.radChocolate.Name = "radChocolate";
+            this.radChocolate.Size = new System.Drawing.Size(131, 64);
+            this.radChocolate.TabIndex = 10;
+            this.radChocolate.TabStop = true;
+            this.radChocolate.Text = "Chocolate";
+            this.radChocolate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radChocolate.UseVisualStyleBackColor = true;
+            // 
+            // radVanilla
+            // 
+            this.radVanilla.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radVanilla.Location = new System.Drawing.Point(154, 42);
+            this.radVanilla.Name = "radVanilla";
+            this.radVanilla.Size = new System.Drawing.Size(131, 64);
+            this.radVanilla.TabIndex = 11;
+            this.radVanilla.TabStop = true;
+            this.radVanilla.Text = "Vanilla";
+            this.radVanilla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radVanilla.UseVisualStyleBackColor = true;
+            // 
+            // radStrawberry
+            // 
+            this.radStrawberry.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radStrawberry.Location = new System.Drawing.Point(301, 42);
+            this.radStrawberry.Name = "radStrawberry";
+            this.radStrawberry.Size = new System.Drawing.Size(131, 64);
+            this.radStrawberry.TabIndex = 12;
+            this.radStrawberry.TabStop = true;
+            this.radStrawberry.Text = "Strawberry";
+            this.radStrawberry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radStrawberry.UseVisualStyleBackColor = true;
+            // 
+            // radSherbert
+            // 
+            this.radSherbert.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radSherbert.Location = new System.Drawing.Point(17, 138);
+            this.radSherbert.Name = "radSherbert";
+            this.radSherbert.Size = new System.Drawing.Size(131, 64);
+            this.radSherbert.TabIndex = 13;
+            this.radSherbert.TabStop = true;
+            this.radSherbert.Text = "Sherbert";
+            this.radSherbert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radSherbert.UseVisualStyleBackColor = true;
+            // 
+            // radCoffee
+            // 
+            this.radCoffee.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radCoffee.Location = new System.Drawing.Point(159, 138);
+            this.radCoffee.Name = "radCoffee";
+            this.radCoffee.Size = new System.Drawing.Size(131, 64);
+            this.radCoffee.TabIndex = 14;
+            this.radCoffee.TabStop = true;
+            this.radCoffee.Text = "Coffee";
+            this.radCoffee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radCoffee.UseVisualStyleBackColor = true;
+            // 
+            // radBanana
+            // 
+            this.radBanana.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radBanana.Location = new System.Drawing.Point(296, 138);
+            this.radBanana.Name = "radBanana";
+            this.radBanana.Size = new System.Drawing.Size(131, 64);
+            this.radBanana.TabIndex = 15;
+            this.radBanana.TabStop = true;
+            this.radBanana.Text = "Banana";
+            this.radBanana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radBanana.UseVisualStyleBackColor = true;
+            // 
             // EmpDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,16 +545,21 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnPayDebit;
         private System.Windows.Forms.Button btnPayCredit;
-        private System.Windows.Forms.Button btnTip;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtTotalDue;
         private System.Windows.Forms.TextBox txtTax;
         private System.Windows.Forms.TextBox txtSubTotal;
-        private System.Windows.Forms.CheckBox chkSherbert;
-        private System.Windows.Forms.CheckBox chkCoffee;
-        private System.Windows.Forms.CheckBox chkBanana;
-        private System.Windows.Forms.CheckBox chkStrawberry;
-        private System.Windows.Forms.CheckBox chkVanilla;
-        private System.Windows.Forms.CheckBox chkChocolate;
+        private System.Windows.Forms.TextBox txtTip;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radTwentyPercent;
+        private System.Windows.Forms.RadioButton radFifteenPercent;
+        private System.Windows.Forms.RadioButton radTenPercent;
+        private System.Windows.Forms.RadioButton radFivePercent;
+        private System.Windows.Forms.RadioButton radBanana;
+        private System.Windows.Forms.RadioButton radCoffee;
+        private System.Windows.Forms.RadioButton radSherbert;
+        private System.Windows.Forms.RadioButton radStrawberry;
+        private System.Windows.Forms.RadioButton radVanilla;
+        private System.Windows.Forms.RadioButton radChocolate;
     }
 }

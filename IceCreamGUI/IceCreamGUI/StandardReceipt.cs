@@ -9,38 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Net.Mail;
-
 namespace IceCreamGUI
 {
-    public partial class frmReceipt : Form
+    public partial class StandardReceipt : Form
     {
-        public frmReceipt()
+        public StandardReceipt()
         {
             InitializeComponent();
         }
 
 
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            EmployeeOptionTab ss = new EmployeeOptionTab();
-            ss.Show();
-        }
 
-        private void frmReceipt_Load(object sender, EventArgs e)
+
+        private void StandardReceipt_Load(object sender, EventArgs e)
         {
             int iceCreamNum = 0;
 
-            
             foreach (frmMain.IceCream I in frmMain.cart)
             {
-                lstSummary.Items.Add(frmCardPayment.passingText);
-                lstSummary.Items.Add(frmCardPayment.passingText2);
-                lstSummary.Items.Add(frmCardPayment.passingText3);
-                lstSummary.Items.Add(frmCardPayment.passingText4);
-                lstSummary.Items.Add(frmCardPayment.passingText5);
-
                 iceCreamNum++;
 
                 lstSummary.Items.Add(("Ice Cream #" + iceCreamNum.ToString()));
@@ -52,10 +39,8 @@ namespace IceCreamGUI
                     lstSummary.Items.Add(topping.ToString());
                 lstSummary.Items.Add(("Item cost: " + I.Cost.ToString("C2")));
                 lstSummary.Items.Add(" ");
-
-               
-
             }
+
 
             double totalIceCream = 0.0;
 
@@ -73,11 +58,6 @@ namespace IceCreamGUI
             txtTotalBalance.Text = (totalIceCream + totalOrder).ToString("C2");
         }
 
-        private void btnEmail_Click(object sender, EventArgs e)
-        {
-            //need code that prompts user for email, will then send contents in the list box to user's email
-
-        }
         private PrintDocument document = new PrintDocument();
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -88,7 +68,6 @@ namespace IceCreamGUI
             ppd.Document.DocumentName = "Receipt";
             document.PrintPage += document_PrintPage;
             ppd.ShowDialog();
-
         }
 
         void document_PrintPage(object sender, PrintPageEventArgs e)
@@ -98,7 +77,7 @@ namespace IceCreamGUI
             int leftMargin = 25;
             int topMargin = 10;
 
-            
+
             StringFormat FmtRight = new StringFormat() { Alignment = StringAlignment.Far };
             StringFormat FmtLeft = new StringFormat() { Alignment = StringAlignment.Near };
             StringFormat FmtCenter = new StringFormat() { Alignment = StringAlignment.Near };
@@ -116,6 +95,11 @@ namespace IceCreamGUI
             }
         }
 
-    }
-    }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
+        
+    }
+}

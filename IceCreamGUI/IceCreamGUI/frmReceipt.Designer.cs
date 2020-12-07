@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEmail = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lstSummary = new System.Windows.Forms.ListBox();
@@ -40,19 +39,9 @@
             this.txtTotalBalance = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnEmail
-            // 
-            this.btnEmail.Location = new System.Drawing.Point(612, 28);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(159, 44);
-            this.btnEmail.TabIndex = 0;
-            this.btnEmail.Text = "Email Receipt";
-            this.btnEmail.UseVisualStyleBackColor = true;
-            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
-            // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(612, 95);
+            this.btnPrint.Location = new System.Drawing.Point(629, 519);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(159, 44);
             this.btnPrint.TabIndex = 1;
@@ -144,7 +133,6 @@
             this.Controls.Add(this.lstSummary);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.btnEmail);
             this.Name = "frmReceipt";
             this.Text = "Receipt";
             this.Load += new System.EventHandler(this.frmReceipt_Load);
@@ -154,8 +142,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnEmail;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ListBox lstSummary;
