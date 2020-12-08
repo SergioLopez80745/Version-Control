@@ -11,9 +11,12 @@ namespace IceCreamGUI
         SqlConnection con = new SqlConnection(@"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;");
         SqlCommand cmd;
         SqlDataAdapter adapt;
+        DataTable dt;
+       
 
         //ID variable used in Updating and Deleting Record  
-        int ID = 0;
+        int employeeId;
+
 
         public ManagerDashboard()
         {
@@ -28,6 +31,7 @@ namespace IceCreamGUI
 
         private void btnViewSchedule_Click(object sender, EventArgs e)
         {
+            //DisplayDataSch();
             SqlConnection con = new SqlConnection();
             con.ConnectionString = @"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;";
 
@@ -41,7 +45,11 @@ namespace IceCreamGUI
             adapter.Fill(Schedule);
             dataGridView1.DataSource = Schedule;
 
+            ClearData();
+
             //lables , text boxes and bottons for employees
+            label1.Hide();
+            label2.Hide();
             label3.Hide();
             label4.Hide();
             label5.Hide();
@@ -54,6 +62,8 @@ namespace IceCreamGUI
             txtPassword.Hide();
             txtPhone.Hide();
             txtUserName.Hide();
+            txtAddress.Hide();
+            txtPay.Hide();
             btnAddEmp.Hide();
             btnRemoveEmp.Hide();
             btnUpdateEmp.Hide();
@@ -79,6 +89,7 @@ namespace IceCreamGUI
             btnAddSch.Show();
             btnRemoveSch.Show();
             btnUpdateSch.Show();
+
         }
 
         private void btnViewItem_Click(object sender, EventArgs e)
@@ -97,10 +108,12 @@ namespace IceCreamGUI
             dataGridView1.DataSource = Product;
 
             infoHide();
+            ClearData();
         }
 
         private void btnViewEmp_Click(object sender, EventArgs e)
         {
+            //DisplayDataEmp();
             SqlConnection con = new SqlConnection();
             con.ConnectionString = @"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;";
 
@@ -114,7 +127,11 @@ namespace IceCreamGUI
             adapter.Fill(Employee);
             dataGridView1.DataSource = Employee;
 
+            ClearData();
+
             //lables , text boxes and bottons for employees
+            label1.Show();
+            label2.Show();
             label3.Show();
             label4.Show();
             label5.Show();
@@ -127,6 +144,8 @@ namespace IceCreamGUI
             txtPassword.Show();
             txtPhone.Show();
             txtUserName.Show();
+            txtPay.Show();
+            txtAddress.Show();
             btnAddEmp.Show();        
             btnRemoveEmp.Show();         
             btnUpdateEmp.Show();
@@ -175,6 +194,8 @@ namespace IceCreamGUI
             txtFri.Hide();
 
             //employees
+            label1.Hide();
+            label2.Hide();
             label3.Hide();
             label4.Hide();
             label5.Hide();
@@ -187,6 +208,8 @@ namespace IceCreamGUI
             txtPassword.Hide();
             txtPhone.Hide();
             txtUserName.Hide();
+            txtAddress.Hide();
+            txtPay.Hide();
             
             //bouttons
             btnAddEmp.Hide();
@@ -245,17 +268,20 @@ namespace IceCreamGUI
 
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
-            if (txtId.Text != "" && txtFName.Text != "" && txtLName.Text != "" && txtPhone.Text != "" && txtUserName.Text != "" && txtPassword.Text != "")
+            if (txtId.Text != "" && txtFName.Text != "" && txtLName.Text != "" && txtPhone.Text != "" && txtUserName.Text != "" && txtPassword.Text != "" && txtAddress.Text != "" && txtPay.Text != "")
             {
-                cmd = new SqlCommand("insert into Employee(Employee Id,Fname,LName,Phone#,UserName,Password) valeus(@employeeid,@fname,@lname,@phone#,@username,@password)", con);
+                
+                cmd = new SqlCommand("insert into Employee(EmployeeId,Fname,LName,Phone#,UserName,Password,Address,Pay) values(@employeeid,@fname,@lname,@phone#,@username,@password,@address,@pay)", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("@employeeid", txtId);
-                cmd.Parameters.AddWithValue("@fname", txtFName);
-                cmd.Parameters.AddWithValue("@lname", txtLName);
-                cmd.Parameters.AddWithValue("@phone#", txtPhone);
-                cmd.Parameters.AddWithValue("@username", txtUserName);
-                cmd.Parameters.AddWithValue("@password", txtPassword);
-                //cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@employeeid", txtId.Text);
+                cmd.Parameters.AddWithValue("@fname", txtFName.Text);
+                cmd.Parameters.AddWithValue("@lname", txtLName.Text);
+                cmd.Parameters.AddWithValue("@phone#", txtPhone.Text);
+                cmd.Parameters.AddWithValue("@username", txtUserName.Text);
+                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                cmd.Parameters.AddWithValue("@address",txtAddress.Text);
+                cmd.Parameters.AddWithValue("@pay", txtPay.Text);
+                cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Record Inserted Successfully");
                 DisplayDataEmp();
@@ -279,6 +305,16 @@ namespace IceCreamGUI
             con.Close();
         }
 
+        private void DisplayDataSch()
+        {
+            con.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("Select * From Schedule", con);
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
         //Clear Data  
         private void ClearData()
         {
@@ -288,7 +324,145 @@ namespace IceCreamGUI
             txtPhone.Text = "";
             txtUserName.Text = "";
             txtPassword.Text = "";
-            ID = 0;
+            txtPay.Text = "";
+            txtAddress.Text = "";
+
+            txtAddEmployee.Text = "";
+            txtSun.Text = "";
+            txtMon.Text = "";
+            txtTues.Text = "";
+            txtWed.Text = "";
+            txtThur.Text = "";
+            txtFri.Text = "";
+            txtSat.Text = "";
+        }
+
+
+        private void btnRemoveEmp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand("delete from Employee where EmployeeId='" + txtId.Text + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                DisplayDataEmp();
+
+                MessageBox.Show("Record Deleted Successfully!");
+
+                ClearData();
+            }
+            catch
+            {
+                MessageBox.Show("Please type Id in Employee Id to delete record.");
+            }
+        }
+
+        private void btnUpdateEmp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand("update Employee set EmployeeId='" + txtId.Text + "', FName='" + txtFName.Text+"',LName='"+txtLName.Text+"',Phone#='"+txtPhone.Text+"',UserName='"+txtUserName.Text+"',Password='"+txtPassword.Text+"',Address='"+txtAddress.Text+"',Pay='"+txtPay.Text+"'where EmployeeId='"+employeeId+"'",con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+                DisplayDataEmp();
+                ClearData();
+            }
+            catch
+            {
+                MessageBox.Show("Please Select Record to Update");
+            }
+        }
+
+        private void btnAddSch_Click(object sender, EventArgs e)
+        {
+            if (txtAddEmployee.Text != "" && txtSun.Text != "" && txtMon.Text != "" && txtTues.Text != "" && txtWed.Text != "" && txtThur.Text != "" && txtFri.Text != "" && txtSat.Text != "")
+            {
+                con.Open();
+                cmd = new SqlCommand("insert into Schedule(EmployeeId,Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday) values(@employeeid,@sunday,@monday,@tuesday,@wednesday,@thursday,@friday,@saturday)", con);
+                
+                cmd.Parameters.AddWithValue("@employeeid", txtAddEmployee.Text);
+                cmd.Parameters.AddWithValue("@sunday",txtSun.Text);
+                cmd.Parameters.AddWithValue("@monday", txtMon.Text);
+                cmd.Parameters.AddWithValue("@tuesday", txtTues.Text);
+                cmd.Parameters.AddWithValue("@wednesday", txtWed.Text);
+                cmd.Parameters.AddWithValue("@thursday", txtThur.Text);
+                cmd.Parameters.AddWithValue("@friday", txtFri.Text);
+                cmd.Parameters.AddWithValue("@saturday", txtSat.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+                DisplayDataSch();
+                ClearData();
+            }
+
+            else
+            {
+                MessageBox.Show("Please Provide Details!");
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+                txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtFName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtLName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtPhone.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtUserName.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtPassword.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtPay.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                txtAddEmployee.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtSun.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtMon.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtTues.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtWed.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtThur.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtFri.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtSat.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                employeeId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void btnRemoveSch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand("delete from Schedule where EmployeeId='" + txtAddEmployee.Text + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                DisplayDataSch();
+
+                MessageBox.Show("Record Deleted Successfully!");
+
+                ClearData();
+            }
+            catch
+            {
+                MessageBox.Show("Please type Id in Employee Id to delete record.");
+            }
+        }
+
+        private void btnUpdateSch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand("update Schedule set EmployeeId='" + txtAddEmployee.Text + "', Sunday='" + txtSun.Text + "',Monday='" + txtMon.Text + "',Tuesday='" + txtTues.Text + "',Wednesday='" + txtWed.Text + "',Thursday='" + txtThur.Text + "',Friday='" + txtFri.Text + "',Saturday='" + txtSat.Text + "'where EmployeeId='" + employeeId + "'", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+                DisplayDataSch();
+                ClearData();
+            }
+            catch
+            {
+                MessageBox.Show("Please Select Record to Update");
+            }
         }
     }
 }

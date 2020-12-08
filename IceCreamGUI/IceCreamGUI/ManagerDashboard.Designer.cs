@@ -69,6 +69,10 @@
             this.lblThur = new System.Windows.Forms.Label();
             this.lblSat = new System.Windows.Forms.Label();
             this.lblFri = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPay = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +83,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(981, 264);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnViewEmp
             // 
@@ -108,6 +113,7 @@
             this.btnRemoveEmp.TabIndex = 5;
             this.btnRemoveEmp.Text = "Remove Employee";
             this.btnRemoveEmp.UseVisualStyleBackColor = true;
+            this.btnRemoveEmp.Click += new System.EventHandler(this.btnRemoveEmp_Click);
             // 
             // btnAddEmp
             // 
@@ -127,6 +133,7 @@
             this.btnUpdateEmp.TabIndex = 7;
             this.btnUpdateEmp.Text = "Update Employee";
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
+            this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
             // btnPrintSchedule
             // 
@@ -190,6 +197,7 @@
             this.btnUpdateSch.TabIndex = 23;
             this.btnUpdateSch.Text = "Update Schedule";
             this.btnUpdateSch.UseVisualStyleBackColor = true;
+            this.btnUpdateSch.Click += new System.EventHandler(this.btnUpdateSch_Click);
             // 
             // btnAddSch
             // 
@@ -199,6 +207,7 @@
             this.btnAddSch.TabIndex = 22;
             this.btnAddSch.Text = "Add Schedule";
             this.btnAddSch.UseVisualStyleBackColor = true;
+            this.btnAddSch.Click += new System.EventHandler(this.btnAddSch_Click);
             // 
             // btnRemoveSch
             // 
@@ -208,6 +217,7 @@
             this.btnRemoveSch.TabIndex = 21;
             this.btnRemoveSch.Text = "Remove Schedule";
             this.btnRemoveSch.UseVisualStyleBackColor = true;
+            this.btnRemoveSch.Click += new System.EventHandler(this.btnRemoveSch_Click);
             // 
             // txtId
             // 
@@ -417,12 +427,48 @@
             this.lblFri.TabIndex = 49;
             this.lblFri.Text = "Friday:";
             // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(80, 162);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(144, 20);
+            this.txtAddress.TabIndex = 50;
+            // 
+            // txtPay
+            // 
+            this.txtPay.Location = new System.Drawing.Point(348, 162);
+            this.txtPay.Name = "txtPay";
+            this.txtPay.Size = new System.Drawing.Size(144, 20);
+            this.txtPay.TabIndex = 51;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 165);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Address:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(314, 165);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Pay:";
+            // 
             // ManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1005, 586);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPay);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblFri);
             this.Controls.Add(this.lblSat);
             this.Controls.Add(this.lblThur);
@@ -516,5 +562,9 @@
         private System.Windows.Forms.Label lblThur;
         private System.Windows.Forms.Label lblSat;
         private System.Windows.Forms.Label lblFri;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtPay;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
