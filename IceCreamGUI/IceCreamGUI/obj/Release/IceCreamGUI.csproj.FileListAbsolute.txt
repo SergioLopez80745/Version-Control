@@ -1,0 +1,14 @@
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\bin\Release\IceCreamGUI.exe.config
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\bin\Release\IceCreamGUI.exe
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\bin\Release\IceCreamGUI.pdb
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.csprojAssemblyReference.cache
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.CheakOut.resources
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.EmployeeOptionTab.resources
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.frmMain.resources
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.EmpDashboard.resources
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.ManagerDashboard.resources
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.Properties.Resources.resources
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.csproj.GenerateResource.cache
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.csproj.CoreCompileInputs.cache
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.exe
+C:\Users\mickl\Desktop\GitHub\Version-Control\IceCreamGUI\IceCreamGUI\obj\Release\IceCreamGUI.pdb
