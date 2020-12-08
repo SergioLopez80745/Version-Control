@@ -464,5 +464,12 @@ namespace IceCreamGUI
                 MessageBox.Show("Please Select Record to Update");
             }
         }
+
+        private void btnPrintInventory_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ReportInventory ri = new ReportInventory();
+            ri.Show();
+        }
     }
 }

@@ -34,7 +34,6 @@
             this.btnRemoveEmp = new System.Windows.Forms.Button();
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
-            this.btnPrintSchedule = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnPrintInventory = new System.Windows.Forms.Button();
             this.btnViewSchedule = new System.Windows.Forms.Button();
@@ -135,15 +134,6 @@
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
             this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
-            // btnPrintSchedule
-            // 
-            this.btnPrintSchedule.Location = new System.Drawing.Point(12, 524);
-            this.btnPrintSchedule.Name = "btnPrintSchedule";
-            this.btnPrintSchedule.Size = new System.Drawing.Size(165, 50);
-            this.btnPrintSchedule.TabIndex = 9;
-            this.btnPrintSchedule.Text = "Print Schedule";
-            this.btnPrintSchedule.UseVisualStyleBackColor = true;
-            // 
             // btnLogOut
             // 
             this.btnLogOut.Location = new System.Drawing.Point(828, 524);
@@ -156,12 +146,13 @@
             // 
             // btnPrintInventory
             // 
-            this.btnPrintInventory.Location = new System.Drawing.Point(183, 524);
+            this.btnPrintInventory.Location = new System.Drawing.Point(12, 524);
             this.btnPrintInventory.Name = "btnPrintInventory";
             this.btnPrintInventory.Size = new System.Drawing.Size(165, 50);
             this.btnPrintInventory.TabIndex = 8;
             this.btnPrintInventory.Text = "Print Inventory";
             this.btnPrintInventory.UseVisualStyleBackColor = true;
+            this.btnPrintInventory.Click += new System.EventHandler(this.btnPrintInventory_Click);
             // 
             // btnViewSchedule
             // 
@@ -502,7 +493,6 @@
             this.Controls.Add(this.lblAddEmpId);
             this.Controls.Add(this.btnViewSchedule);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnPrintSchedule);
             this.Controls.Add(this.btnPrintInventory);
             this.Controls.Add(this.btnUpdateEmp);
             this.Controls.Add(this.btnAddEmp);
@@ -527,7 +517,6 @@
         private System.Windows.Forms.Button btnRemoveEmp;
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.Button btnUpdateEmp;
-        private System.Windows.Forms.Button btnPrintSchedule;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnPrintInventory;
         private System.Windows.Forms.Button btnViewSchedule;
