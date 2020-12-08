@@ -225,7 +225,8 @@ namespace IceCreamGUI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            new EmployeeOptionTab().Show();
         }
 
         private void EmpDashboard_Load(object sender, EventArgs e)
