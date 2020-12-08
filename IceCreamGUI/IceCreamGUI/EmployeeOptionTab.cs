@@ -29,11 +29,11 @@ namespace IceCreamGUI
         private void EmployeeOptionTab_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;";
+            con.ConnectionString = @"Data Source=cstnt.tstc.edu;Initial Catalog=inew2330fa20;Persist Security Info=True;User ID=group5b;Password=group5b;";
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "Select * From Schedule";
+            cmd.CommandText = "Select * From group5B.Schedule";
 
             DataTable Schedule = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);

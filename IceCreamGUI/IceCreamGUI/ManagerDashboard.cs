@@ -8,7 +8,7 @@ namespace IceCreamGUI
 {
     public partial class ManagerDashboard : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;");
+        SqlConnection con = new SqlConnection(@"Data Source=cstnt.tstc.edu;Initial Catalog=inew2330fa20;Persist Security Info=True;User ID=group5b;Password=group5b;");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         DataTable dt;
@@ -33,11 +33,11 @@ namespace IceCreamGUI
         {
             //DisplayDataSch();
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;";
+            con.ConnectionString = @"Data Source=cstnt.tstc.edu;Initial Catalog=inew2330fa20;Persist Security Info=True;User ID=group5b;Password=group5b;";
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "Select * From Schedule";
+            cmd.CommandText = "Select * From group5B.Schedule";
 
             DataTable Schedule = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -95,11 +95,11 @@ namespace IceCreamGUI
         private void btnViewItem_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;";
+            con.ConnectionString = @"Data Source=cstnt.tstc.edu;Initial Catalog=inew2330fa20;Persist Security Info=True;User ID=group5b;Password=group5b;";
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "Select * From Product";
+            cmd.CommandText = "Select * From group5B.Product";
 
             DataTable Product = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -115,11 +115,11 @@ namespace IceCreamGUI
         {
             //DisplayDataEmp();
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;";
+            con.ConnectionString = @"Data Source=cstnt.tstc.edu;Initial Catalog=inew2330fa20;Persist Security Info=True;User ID=group5b;Password=group5b;";
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "Select * From Employee";
+            cmd.CommandText = "Select * From group5B.Employee";
 
             DataTable Employee = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -270,13 +270,13 @@ namespace IceCreamGUI
         {
             if (txtId.Text != "" && txtFName.Text != "" && txtLName.Text != "" && txtPhone.Text != "" && txtUserName.Text != "" && txtPassword.Text != "" && txtAddress.Text != "" && txtPay.Text != "")
             {
-                
-                cmd = new SqlCommand("insert into Employee(EmployeeId,Fname,LName,Phone#,UserName,Password,Address,Pay) values(@employeeid,@fname,@lname,@phone#,@username,@password,@address,@pay)", con);
                 con.Open();
+                cmd = new SqlCommand("insert into group5B.Employee(EmployeeId,Fname,LName,Phone,UserName,Password,Address,Pay) values(@employeeid,@fname,@lname,@phone,@username,@password,@address,@pay)", con);
+                
                 cmd.Parameters.AddWithValue("@employeeid", txtId.Text);
                 cmd.Parameters.AddWithValue("@fname", txtFName.Text);
                 cmd.Parameters.AddWithValue("@lname", txtLName.Text);
-                cmd.Parameters.AddWithValue("@phone#", txtPhone.Text);
+                cmd.Parameters.AddWithValue("@phone", txtPhone.Text);
                 cmd.Parameters.AddWithValue("@username", txtUserName.Text);
                 cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                 cmd.Parameters.AddWithValue("@address",txtAddress.Text);
@@ -299,7 +299,7 @@ namespace IceCreamGUI
         {
             con.Open();
             DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("Select * From Employee", con);
+            adapt = new SqlDataAdapter("Select * From group5B.Employee", con);
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
@@ -309,7 +309,7 @@ namespace IceCreamGUI
         {
             con.Open();
             DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("Select * From Schedule", con);
+            adapt = new SqlDataAdapter("Select * From group5B.Schedule", con);
             adapt.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
@@ -343,7 +343,7 @@ namespace IceCreamGUI
             try
             {
                 con.Open();
-                cmd = new SqlCommand("delete from Employee where EmployeeId='" + txtId.Text + "'", con);
+                cmd = new SqlCommand("delete from group5B.Employee where EmployeeId='" + txtId.Text + "'", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 DisplayDataEmp();
@@ -363,7 +363,7 @@ namespace IceCreamGUI
             try
             {
                 con.Open();
-                cmd = new SqlCommand("update Employee set EmployeeId='" + txtId.Text + "', FName='" + txtFName.Text+"',LName='"+txtLName.Text+"',Phone#='"+txtPhone.Text+"',UserName='"+txtUserName.Text+"',Password='"+txtPassword.Text+"',Address='"+txtAddress.Text+"',Pay='"+txtPay.Text+"'where EmployeeId='"+employeeId+"'",con);
+                cmd = new SqlCommand("update group5B.Employee set EmployeeId='" + txtId.Text + "', FName='" + txtFName.Text+"',LName='"+txtLName.Text+"',Phone='"+txtPhone.Text+"',UserName='"+txtUserName.Text+"',Password='"+txtPassword.Text+"',Address='"+txtAddress.Text+"',Pay='"+txtPay.Text+"'where EmployeeId='"+employeeId+"'",con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Updated Successfully");
                 con.Close();
@@ -381,7 +381,7 @@ namespace IceCreamGUI
             if (txtAddEmployee.Text != "" && txtSun.Text != "" && txtMon.Text != "" && txtTues.Text != "" && txtWed.Text != "" && txtThur.Text != "" && txtFri.Text != "" && txtSat.Text != "")
             {
                 con.Open();
-                cmd = new SqlCommand("insert into Schedule(EmployeeId,Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday) values(@employeeid,@sunday,@monday,@tuesday,@wednesday,@thursday,@friday,@saturday)", con);
+                cmd = new SqlCommand("insert into group5B.Schedule(EmployeeId,Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday) values(@employeeid,@sunday,@monday,@tuesday,@wednesday,@thursday,@friday,@saturday)", con);
                 
                 cmd.Parameters.AddWithValue("@employeeid", txtAddEmployee.Text);
                 cmd.Parameters.AddWithValue("@sunday",txtSun.Text);
@@ -432,7 +432,7 @@ namespace IceCreamGUI
             try
             {
                 con.Open();
-                cmd = new SqlCommand("delete from Schedule where EmployeeId='" + txtAddEmployee.Text + "'", con);
+                cmd = new SqlCommand("delete from group5B.Schedule where EmployeeId='" + txtAddEmployee.Text + "'", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 DisplayDataSch();
@@ -452,7 +452,7 @@ namespace IceCreamGUI
             try
             {
                 con.Open();
-                cmd = new SqlCommand("update Schedule set EmployeeId='" + txtAddEmployee.Text + "', Sunday='" + txtSun.Text + "',Monday='" + txtMon.Text + "',Tuesday='" + txtTues.Text + "',Wednesday='" + txtWed.Text + "',Thursday='" + txtThur.Text + "',Friday='" + txtFri.Text + "',Saturday='" + txtSat.Text + "'where EmployeeId='" + employeeId + "'", con);
+                cmd = new SqlCommand("update group5B.Schedule set EmployeeId='" + txtAddEmployee.Text + "', Sunday='" + txtSun.Text + "',Monday='" + txtMon.Text + "',Tuesday='" + txtTues.Text + "',Wednesday='" + txtWed.Text + "',Thursday='" + txtThur.Text + "',Friday='" + txtFri.Text + "',Saturday='" + txtSat.Text + "'where EmployeeId='" + employeeId + "'", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Updated Successfully");
                 con.Close();

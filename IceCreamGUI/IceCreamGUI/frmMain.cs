@@ -57,11 +57,11 @@ namespace IceCreamGUI
                 Cost = total;
             }
         }
-
+        //Data Source=cstnt.tstc.edu;Initial Catalog=inew2330fa20;Persist Security Info=True;User ID=group5b;Password=group5b
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;");
-            SqlCommand cmd = new SqlCommand("Select * From Employee Where UserName ='" + txtUserId.Text + "' and Password = '" + txtPassword.Text + "'", con);
+            SqlConnection con = new SqlConnection(@"Data Source=cstnt.tstc.edu;Initial Catalog=inew2330fa20;Persist Security Info=True;User ID=group5b;Password=group5b;");
+            SqlCommand cmd = new SqlCommand("select * from group5B.Employee Where UserName ='" + txtUserId.Text + "' and Password = '" + txtPassword.Text + "'", con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -79,8 +79,8 @@ namespace IceCreamGUI
         }
         private void btnMLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source = NZXT2080TI\SQLEXPRESS; Initial Catalog = IceCreamData; Integrated Security = True;");
-            SqlCommand cmd = new SqlCommand("Select * From Manager Where UserName ='" + txtUserId.Text + "' and Password = '" + txtPassword.Text + "'", con);
+            SqlConnection con = new SqlConnection(@"Data Source=cstnt.tstc.edu;Initial Catalog=inew2330fa20;Persist Security Info=True;User ID=group5b;Password=group5b;");
+            SqlCommand cmd = new SqlCommand("Select * From group5B.Manager Where UserName ='" + txtUserId.Text + "' and Password = '" + txtPassword.Text + "'", con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
