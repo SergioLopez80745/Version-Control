@@ -16,6 +16,7 @@ namespace IceCreamGUI
 
         //ID variable used in Updating and Deleting Record  
         int employeeId;
+        int employeeIdSch;
 
 
         public ManagerDashboard()
@@ -268,27 +269,34 @@ namespace IceCreamGUI
 
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
-            if (txtId.Text != "" && txtFName.Text != "" && txtLName.Text != "" && txtPhone.Text != "" && txtUserName.Text != "" && txtPassword.Text != "" && txtAddress.Text != "" && txtPay.Text != "")
+            try
             {
-                con.Open();
-                cmd = new SqlCommand("insert into group5B.Employee(EmployeeId,Fname,LName,Phone,UserName,Password,Address,Pay) values(@employeeid,@fname,@lname,@phone,@username,@password,@address,@pay)", con);
-                
-                cmd.Parameters.AddWithValue("@employeeid", txtId.Text);
-                cmd.Parameters.AddWithValue("@fname", txtFName.Text);
-                cmd.Parameters.AddWithValue("@lname", txtLName.Text);
-                cmd.Parameters.AddWithValue("@phone", txtPhone.Text);
-                cmd.Parameters.AddWithValue("@username", txtUserName.Text);
-                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-                cmd.Parameters.AddWithValue("@address",txtAddress.Text);
-                cmd.Parameters.AddWithValue("@pay", txtPay.Text);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Record Inserted Successfully");
-                DisplayDataEmp();
-                ClearData();
-            }
+                if (txtId.Text != "" && txtFName.Text != "" && txtLName.Text != "" && txtPhone.Text != "" && txtUserName.Text != "" && txtPassword.Text != "" && txtAddress.Text != "" && txtPay.Text != "")
+                {
+                    con.Open();
+                    cmd = new SqlCommand("insert into group5B.Employee(EmployeeId,Fname,LName,Phone,UserName,Password,Address,Pay) values(@employeeid,@fname,@lname,@phone,@username,@password,@address,@pay)", con);
 
-            else
+                    cmd.Parameters.AddWithValue("@employeeid", txtId.Text);
+                    cmd.Parameters.AddWithValue("@fname", txtFName.Text);
+                    cmd.Parameters.AddWithValue("@lname", txtLName.Text);
+                    cmd.Parameters.AddWithValue("@phone", txtPhone.Text);
+                    cmd.Parameters.AddWithValue("@username", txtUserName.Text);
+                    cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                    cmd.Parameters.AddWithValue("@address", txtAddress.Text);
+                    cmd.Parameters.AddWithValue("@pay", txtPay.Text);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Record Inserted Successfully");
+                    DisplayDataEmp();
+                    ClearData();
+                }
+
+                else
+                {
+                    MessageBox.Show("Please Provide Details!");
+                }
+            }
+            catch
             {
                 MessageBox.Show("Please Provide Details!");
             }
@@ -363,7 +371,7 @@ namespace IceCreamGUI
             try
             {
                 con.Open();
-                cmd = new SqlCommand("update group5B.Employee set EmployeeId='" + txtId.Text + "', FName='" + txtFName.Text+"',LName='"+txtLName.Text+"',Phone='"+txtPhone.Text+"',UserName='"+txtUserName.Text+"',Password='"+txtPassword.Text+"',Address='"+txtAddress.Text+"',Pay='"+txtPay.Text+"'where EmployeeId='"+employeeId+"'",con);
+                cmd = new SqlCommand("update group5B.Employee set EmployeeId='" + txtId.Text + "', FName='" + txtFName.Text+"',LName='"+txtLName.Text+"',Phone='"+txtPhone.Text+"',UserName='"+txtUserName.Text+"',Password='"+txtPassword.Text+"',Address='"+txtAddress.Text+"',Pay='"+txtPay.Text+ "'where EmployeeId='" + employeeId + "'", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Updated Successfully");
                 con.Close();
@@ -406,6 +414,7 @@ namespace IceCreamGUI
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+                employeeId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtFName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtLName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -415,6 +424,7 @@ namespace IceCreamGUI
                 txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtPay.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
 
+                employeeIdSch = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 txtAddEmployee.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtSun.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtMon.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -424,7 +434,7 @@ namespace IceCreamGUI
                 txtFri.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtSat.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
 
-                employeeId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+               
         }
 
         private void btnRemoveSch_Click(object sender, EventArgs e)
@@ -452,7 +462,7 @@ namespace IceCreamGUI
             try
             {
                 con.Open();
-                cmd = new SqlCommand("update group5B.Schedule set EmployeeId='" + txtAddEmployee.Text + "', Sunday='" + txtSun.Text + "',Monday='" + txtMon.Text + "',Tuesday='" + txtTues.Text + "',Wednesday='" + txtWed.Text + "',Thursday='" + txtThur.Text + "',Friday='" + txtFri.Text + "',Saturday='" + txtSat.Text + "'where EmployeeId='" + employeeId + "'", con);
+                cmd = new SqlCommand("update group5B.Schedule set EmployeeId='" + txtAddEmployee.Text + "', Sunday='" + txtSun.Text + "',Monday='" + txtMon.Text + "',Tuesday='" + txtTues.Text + "',Wednesday='" + txtWed.Text + "',Thursday='" + txtThur.Text + "',Friday='" + txtFri.Text + "',Saturday='" + txtSat.Text + "'where EmployeeId='" + employeeIdSch + "'", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Updated Successfully");
                 con.Close();
