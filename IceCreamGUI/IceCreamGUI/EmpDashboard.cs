@@ -201,10 +201,7 @@ namespace IceCreamGUI
             lstCart.ClearSelected();
         }
 
-        private void lblSize_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnPayCredit_Click(object sender, EventArgs e)
         {
@@ -218,10 +215,7 @@ namespace IceCreamGUI
             this.Hide();
         }
 
-        private void btnTip_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

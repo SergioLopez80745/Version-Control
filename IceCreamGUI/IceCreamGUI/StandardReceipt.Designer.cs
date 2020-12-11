@@ -107,6 +107,7 @@
             this.btnExit.TabIndex = 12;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // btnPrint
             // 
@@ -134,6 +135,7 @@
             this.Controls.Add(this.btnPrint);
             this.Name = "StandardReceipt";
             this.Text = "StandardReceipt";
+            this.Load += new System.EventHandler(this.StandardReceipt_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

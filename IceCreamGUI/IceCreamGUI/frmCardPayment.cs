@@ -66,8 +66,7 @@ namespace IceCreamGUI
             }
 
 
-            new frmReceipt().Show();
-            this.Hide();
+            
         }
 
         private void frmCardPayment_Load(object sender, EventArgs e)

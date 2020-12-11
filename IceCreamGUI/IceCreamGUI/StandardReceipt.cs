@@ -19,10 +19,7 @@ namespace IceCreamGUI
         }
 
 
-
-
-
-        private void StandardReceipt_Load(object sender, EventArgs e)
+        private void StandardReceipt_Load_1(object sender, EventArgs e)
         {
             int iceCreamNum = 0;
 
@@ -57,6 +54,9 @@ namespace IceCreamGUI
             txtTax.Text = totalOrder.ToString("C2");
             txtTotalBalance.Text = (totalIceCream + totalOrder).ToString("C2");
         }
+
+
+
 
         private PrintDocument document = new PrintDocument();
 
@@ -95,9 +95,13 @@ namespace IceCreamGUI
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+       
+
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            EmployeeOptionTab ss = new EmployeeOptionTab();
+            ss.Show();
         }
 
         
